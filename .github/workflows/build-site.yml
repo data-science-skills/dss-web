@@ -1,4 +1,4 @@
-name: Build Website
+name: Build DSS website
 on:
   pull_request:
   push:
