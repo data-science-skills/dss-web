@@ -1,5 +1,10 @@
 # dsk
 lesson website
+
+## Hosting
+ 
+netlify...
+
 ## Setup quarto 
 
 This website is created using quarto. To build locally, you 
@@ -8,9 +13,6 @@ will first need to install it
 
 ## Environment setup 
 1. Install conda envt using mamba 
-
-I suggest that you use mamba for this install as it is much faster than conda 
-is. 
 
 `mamba env create -f environment.yml`
 

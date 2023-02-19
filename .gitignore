@@ -1,7 +1,16 @@
 .DS_Store
-environment.yml
 
 # Pyre type checker
 .pyre/
 
 /.luarc.json
+
+
+dsk/.gitignore
+dsk/_extensions/
+dsk/_site/
+dsk/about.qmd
+dsk/index.css
+dsk/styles.css
+dsk/use-git-github/_metadata.yml
+dsk/use-git-github/fork-github-repo.qmd

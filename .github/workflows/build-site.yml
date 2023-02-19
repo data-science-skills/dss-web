@@ -1,0 +1,27 @@
+name: Build DSS website
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-website:
+    runs-on: ubuntu-latest
+    container: leahawasser/dss-mamba
+    defaults:
+      run:
+        shell: bash -l {0}
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Check versions
+        run: |
+          quarto --version
+          which python
+          mamba env list
+
+      - name: Render website
+        run: |
+          conda activate dataskills
+          quarto render dsk/
