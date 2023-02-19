@@ -1,0 +1,26 @@
+name: Build Website
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - initial-site
+
+jobs:
+  build-website:
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+        version: 0.3.71
+
+      - name: Render website
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html # If set, it will be equivalent to `quarto render --to html`
+          path: dsk # By default, the current working dir is used i.e `quarto render .`
