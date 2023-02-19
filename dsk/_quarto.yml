@@ -1,0 +1,73 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "Data Science Skills"
+  site-url: "https://datascienceskills.org/"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      # - about.qmd
+      - text: Python Quickstart
+        menu:
+        - href: install-python/get-started-python.qmd
+          text: Install Python Environment
+        - href: use-git-github/setup-git-bash.qmd
+          text: Setup git & bash
+    right:
+      - icon: github
+        href: https://github.com/data-science-skills/dsk
+      - icon: twitter
+        href: https://twitter.com/leahawasser
+      - icon: mastodon
+        href: https://fosstodon.org/@leahawasser
+  sidebar:
+
+  - id: setup-git-bash
+    title: "Setup Git & Bash"
+    style: "floating"
+    collapse-level: 2
+    align: left
+    contents:
+      - text: Setup Bash
+        href: use-git-github/setup-git-bash.qmd
+
+  - id: get-started-python
+    title: "Install Python"
+    style: "floating"
+    collapse-level: 2
+    align: left
+    contents:
+      - text: Intro
+        href: install-python/get-started-python.qmd
+      - text: "Install Python"
+        href: install-python/install-python-conda.qmd
+      - text: "Create Conda Environments"
+        href: install-python/create-conda-environment.qmd
+      - text: "Why Conda is Better for Science"
+        href: install-python/why-use-conda-for-science.qmd
+      - text: "Use Python Packages"
+        href: install-python/python-packages.qmd
+      - text: "Tips & Tricks"
+        href: install-python/python-environment-tips.qmd
+  page-footer:
+    left: "Made with 💜, by Leah Wasser. A project supported by [pyOpenSci](https://www.pyopensci.org) License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
+    right:
+      - icon: github
+        href: https://github.com/lwasser/
+      - icon: twitter
+        href: https://twitter.com/leahawasser
+      - icon: mastodon
+        href: https://fosstodon.org/@leahawasser
+      - icon: envelope
+        href: mailto:leahwasser@gmail.com
+format:
+  html:
+    theme: minty
+    css: styles.css
+    toc: true
+
+
+

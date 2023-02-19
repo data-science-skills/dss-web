@@ -1,0 +1,43 @@
+---
+title: "Tips and tricks for checking your Python Environment"
+subtitle: "Yup"
+description: |
+  Learn some helpful tricks to troubleshoot issues with your Python conda environment."
+author: 
+  - "Leah Wasser"
+date: 2023-02-12
+categories:
+  - Python
+  - Get-started
+  - Environment
+toc: true  
+image: "/images/python/python-environment-tips.png"
+---
+
+We've all been there... trying to import a package and python can't find it?
+Below are a few tricks to figure out what environment you are in!
+
+This can be useful when troubleshooting code that is not running as you 
+expect!
+
+# Tips and tricks
+
+## Print your current local environment 
+
+this is a good trick for when you're working in Python and somethign seems 
+wrong with your environment. It could be that you are in a different environment
+than you think you are!
+
+Python to the rescue!
+
+The code snippet below will print the conda environment name to help you 
+troubleshoot. 
+
+```{python}
+import os
+print(os.environ['CONDA_DEFAULT_ENV'])
+```
+
+## Print information about a specific package 
+
+...when you are developing tools you may want to make sure your package is installed in editable mode...
