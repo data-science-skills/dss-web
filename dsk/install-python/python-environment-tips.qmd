@@ -35,7 +35,8 @@ troubleshoot.
 
 ```{python}
 import os
-print(os.environ['CONDA_DEFAULT_ENV'])
+#print(os.environ['CONDA_DEFAULT_ENV'])
+os.environ.keys
 ```
 
 ## Print information about a specific package 
