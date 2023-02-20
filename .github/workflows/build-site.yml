@@ -19,7 +19,7 @@ jobs:
         run: |
           quarto --version
           which python
-          mamba activate dataskills
+          conda activate dataskills
           mamba env list
           mamba list
 
