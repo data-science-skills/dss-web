@@ -8,8 +8,6 @@ on:
 jobs:
   build-website:
     runs-on: ubuntu-latest
-    permissions:
-      actions: write
     container: leahawasser/dss-mamba
     defaults:
       run:
