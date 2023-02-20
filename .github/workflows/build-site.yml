@@ -19,9 +19,8 @@ jobs:
         run: |
           quarto --version
           which python
-          mamba env list
+          mamba list
 
       - name: Render website
         run: |
-          conda activate dataskills
           quarto render dsk/
