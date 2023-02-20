@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.202">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Leah Wasser">
+<meta name="author" content="Jenny Palomino">
+<meta name="dcterms.date" content="2023-02-13">
+<meta name="description" content="Learn how to install Python using conda and the conda-forge channel. Using conda is the best way to minimize issues when setting up Python for scientific use.">
+
+<title>Data Science Skills - Install Python Using Conda &amp; Conda-forge - Mambaforge</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../install-python/create-conda-environment.html" rel="next">
+<link href="../install-python/get-started-python.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Data Science Skills</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-python-quickstart" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Python Quickstart</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-python-quickstart">    
+        <li>
+    <a class="dropdown-item" href="../install-python/get-started-python.html" rel="" target="">
+ <span class="dropdown-text">Install Python Environment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../use-git-github/setup-git-bash.html" rel="" target="">
+ <span class="dropdown-text">Setup git &amp; bash</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/data-science-skills/dsk" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/leahawasser" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/@leahawasser" rel="" target=""><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../install-python/install-python-conda.html">Install Python</a></li></ol></nav>
+      <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../install-python/get-started-python.html" class="sidebar-item-text sidebar-link">Intro</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../install-python/install-python-conda.html" class="sidebar-item-text sidebar-link active">Install Python</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../install-python/create-conda-environment.html" class="sidebar-item-text sidebar-link">Create Conda Environments</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../install-python/why-use-conda-for-science.html" class="sidebar-item-text sidebar-link">Why Conda is Better for Science</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../install-python/python-packages.html" class="sidebar-item-text sidebar-link">Use Python Packages</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../install-python/python-environment-tips.html" class="sidebar-item-text sidebar-link">Tips &amp; Tricks</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-to-install-a-lightweight-python-distribution-using-conda" id="toc-how-to-install-a-lightweight-python-distribution-using-conda" class="nav-link active" data-scroll-target="#how-to-install-a-lightweight-python-distribution-using-conda">How to Install a Lightweight Python Distribution Using Conda</a>
+  <ul class="collapse">
+  <li><a href="#what-to-install---mambaforge-python-distribution" id="toc-what-to-install---mambaforge-python-distribution" class="nav-link" data-scroll-target="#what-to-install---mambaforge-python-distribution">What to install - mambaforge <strong>Python</strong> distribution</a></li>
+  <li><a href="#why-install-mambaforge-instead-of-miniconda-or-anaconda" id="toc-why-install-mambaforge-instead-of-miniconda-or-anaconda" class="nav-link" data-scroll-target="#why-install-mambaforge-instead-of-miniconda-or-anaconda">Why Install Mambaforge instead of Miniconda or Anaconda</a></li>
+  <li><a href="#install-mambaforge-from-the-conda-forge-channel" id="toc-install-mambaforge-from-the-conda-forge-channel" class="nav-link" data-scroll-target="#install-mambaforge-from-the-conda-forge-channel">Install Mambaforge from the conda-forge channel</a>
+  <ul class="collapse">
+  <li><a href="#installation-instructions-by-operating-system" id="toc-installation-instructions-by-operating-system" class="nav-link" data-scroll-target="#installation-instructions-by-operating-system">Installation instructions by operating system</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Install Python Using Conda &amp; Conda-forge - Mambaforge</h1>
+<p class="subtitle lead">Learn how to install Python using conda and the conda-forge channel.</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Get-started</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    <p>Learn how to install Python using conda and the conda-forge channel. Using conda is the best way to minimize issues when setting up Python for scientific use.</p>
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Leah Wasser </p>
+             <p>Jenny Palomino </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 13, 2023</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">February 18, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<div class="callout callout-style-default callout-important callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Learning Objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p></p>
+<p>At the end of this activity, you will be able to:</p>
+<ul>
+<li>Install the lightweight Mambaforge <strong>Python</strong> distribution which uses the conda-forge channel as a default.</li>
+</ul>
+<p><i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> <strong>What You Need</strong></p>
+<p>Before you start this lesson, be sure that you have a computer with internet access.</p>
+</div>
+</div>
+<section id="how-to-install-a-lightweight-python-distribution-using-conda" class="level1">
+<h1>How to Install a Lightweight Python Distribution Using Conda</h1>
+<p>There are numerous ways to install <strong>Python</strong> on your computer. Here, you will learn how to install <strong>Python</strong> using <code>conda</code> and the <code>conda-forge</code> channel.</p>
+<p>If you are a scientist, installing <strong>Python</strong> using conda is especially preferred as it will result in fewer environment conflicts. This is especially true if you are using an environment that uses spatial data.</p>
+<p>Installing conda also will allow you to <a href="../install-python/create-conda-environment.html">create <strong>Python</strong> environments which is a recommended way of working.</a></p>
+<section id="what-to-install---mambaforge-python-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-install---mambaforge-python-distribution">What to install - mambaforge <strong>Python</strong> distribution</h2>
+<p>While you can install any distribution that you wish, we suggest that you install the mambaforge distribution. Mambaforge is a light weight <strong>Python</strong> distribution that installs both <strong>Python</strong> and a subset of the core packages. It uses the conda-forge conda channel. This channel is ideal for installing scientific tools and will result in cleaner, easier to use environments with fewer conflicts.</p>
+<div class="callout callout-style-default callout-note callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+The many other ways to install Python
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can also install Python by:</p>
+<ul>
+<li>Using <strong><em>Homebrew</em></strong></li>
+<li>Installing the entire <strong>Anaconda distribution</strong>: This is a large distribution maintained by Anaconda, Inc.&nbsp;It is not recommended for your initial setup as
+<ol type="1">
+<li>It has many additional packages that you might not need.</li>
+<li>Because it installs using the default conda channel it also could result in dependency conflicts if you have other scientific packages that you may want to install using the conda-forge channel.</li>
+</ol></li>
+<li>Using <strong>Miniconda</strong>: The miniconda distribution, also provided by Anaconda, Inc is a smaller distribution than Anaconda. While it hs fewer packages and is smaller in size than the Anaconda, this distribution still installs packages using the conda <code>defaults</code> channel. This means that you may still encounter environmentl conflicts if you use it. Thus we still recommend that you install mambaforge.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you are a GIS user and on some versions of the MAC operating system, you will also find an existing <strong>Python</strong> distribution on your computer. a quick way to figure out if <strong>Python</strong> already exists on your computer is to open up terminal or bash and run:</p>
+<pre class="{bash}"><code>which python</code></pre>
+</div>
+</div>
+<p>For scientific <strong>Python</strong> applications, it’s best for you to install a lightweight <strong>Python</strong> distribution rather than</p>
+<p>In this lesson, you will learn how to install the mambaforge <strong>Python</strong> distribution on your computer.</p>
+</section>
+<section id="why-install-mambaforge-instead-of-miniconda-or-anaconda" class="level2">
+<h2 class="anchored" data-anchor-id="why-install-mambaforge-instead-of-miniconda-or-anaconda">Why Install Mambaforge instead of Miniconda or Anaconda</h2>
+<p>You also learned that the conda package manager allows you to install <code>Python</code> packages on your computer as well as create and manage multiple <code>Python</code> environments, each containing different packages.</p>
+<p>There are 4 different distributions that you may wish to select from. To keep things simple, we suggest that you install mambaforge distribution. This distribution is preferred because:</p>
+<ul>
+<li>mamba is developed in C++ and will build your environments much faster than conda</li>
+<li>the default conda channel is conda-forge which is the preferred channel for science</li>
+<li>it’s much smaller than the anaconda distribution</li>
+</ul>
+<p>Below is a quick comparison of all 4 distributions.</p>
+<table class="table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tool</th>
+<th style="text-align: left;">Mambaforge</th>
+<th style="text-align: left;">Miniforge</th>
+<th style="text-align: left;"><a href="https://docs.anaconda.com/anaconda/" target="_blank">Anaconda</a></th>
+<th style="text-align: left;"><a href="https://conda.io/projects/conda/en/latest/user-guide/install/index.html" target="_blank">Miniconda</a></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Size</strong></td>
+<td style="text-align: left;">~62mb</td>
+<td style="text-align: left;">~42MB</td>
+<td style="text-align: left;">Large ~2GB</td>
+<td style="text-align: left;">Small ~43MB</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>What’s installed</strong></td>
+<td style="text-align: left;">Conda, Core Python + Mamba</td>
+<td style="text-align: left;">Conda, Core Python</td>
+<td style="text-align: left;">Installs Anaconda Navigator, Spyder, and many other tools that may not be needed</td>
+<td style="text-align: left;">Conda, Core Python</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Default conda channel</strong></td>
+<td style="text-align: left;">conda-forge</td>
+<td style="text-align: left;">conda-forge</td>
+<td style="text-align: left;">conda default</td>
+<td style="text-align: left;">conda default</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Default tool manager </strong></td>
+<td style="text-align: left;">mamba</td>
+<td style="text-align: left;">conda</td>
+<td style="text-align: left;">conda</td>
+<td style="text-align: left;">conda</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="install-mambaforge-from-the-conda-forge-channel" class="level2">
+<h2 class="anchored" data-anchor-id="install-mambaforge-from-the-conda-forge-channel">Install Mambaforge from the conda-forge channel</h2>
+<div class="callout callout-style-default callout-tip callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+For Anaconda Users
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you want to use mambaforge, we strongly suggest that you uninstall Anaconda. If you have environments that you are woried about losing, then you can install mambaforge following the instructions listed below to overwrite the default conda channels.</p>
+</div>
+</div>
+<section id="installation-instructions-by-operating-system" class="level3">
+<h3 class="anchored" data-anchor-id="installation-instructions-by-operating-system">Installation instructions by operating system</h3>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Mac</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Linux</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Windows</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="callout callout-style-default callout-tip callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+For homebrew Users
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you have homebrew installed, then the easiest way to install mambaforge is to use:</p>
+<p><code>brew install mambaforge</code></p>
+<p><a href="https://brew.sh/">Find directions for installing homebrew here.</a></p>
+</div>
+</div>
+<p>If you don’t have homebrew, you can download a mamba installer and use bash to install it.</p>
+<ol type="1">
+<li>Download the installer: <a href="https://github.com/conda-forge/miniforge#mambaforge" target="_blank">Mambaforge installer for Mac</a>. Note that if you have a newer mac with a m1 or m2 chip, then you will want to install the Apple Silicon version:</li>
+</ol>
+<p><code>OS X   arm64 (Apple Silicon)   Mambaforge-MacOSX-arm64</code></p>
+<p>If you have an older mac use</p>
+<p><code>OS X   x86_64  Mambaforge-MacOSX-x86_64</code></p>
+<ol start="2" type="1">
+<li>In your Terminal window, cd to the location of the download file. Run:</li>
+</ol>
+<p><code>bash Mambaforge3-latest-MacOSX-modify-filename-here.sh</code>.</p>
+<ol start="3" type="1">
+<li><p>Follow the prompts on the installer screens.</p></li>
+<li><p>If you are unsure about any setting, accept the defaults. You can change them later.</p></li>
+<li><p>To make sure that the changes take effect, close and then re-open your Terminal window.</p></li>
+</ol>
+<p>Once you are done you can test that the install worked.</p>
+<section id="test-your-install-on-mac" class="level3">
+<h3 class="anchored" data-anchor-id="test-your-install-on-mac">Test your install on Mac</h3>
+<ol type="1">
+<li><p>Search for and open the Terminal program (found in /Applications/Utilities). In this <code>Terminal</code> window, type <code>bash</code> and hit enter. If you do not get a message back, then <code>Bash</code> is available for use.</p></li>
+<li><p>Next, type <code>git</code> and hit enter. If you see a list of commands that you can execute, then <code>Git</code> has been installed correctly.</p></li>
+<li><p>Next, type <code>conda</code> and hit enter. Again, if you see a list of commands that you can execute, then Mambaforge <code>Python</code> has been installed correctly.</p></li>
+<li><p>Close the <code>Terminal</code> by typing <code>exit</code>.</p></li>
+</ol>
+</section>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ol type="1">
+<li><p>Download the installer: <a href="https://github.com/conda-forge/miniforge#mambaforge" target="_blank">Mambaforge installer for Linux</a>.</p></li>
+<li><p>In your Terminal window, run making sure to modify the file name to match the file that you downloaded:</p></li>
+</ol>
+<p><code>bash Mambaforge3-latest-Linux-modify-file-name-here.sh</code>.</p>
+<ol start="3" type="1">
+<li><p>Follow the prompts on the installer screens.</p></li>
+<li><p>If you are unsure about any setting, accept the defaults. You can change them later.</p></li>
+<li><p>To make sure that the changes take effect, close and then re-open your Terminal window.</p></li>
+</ol>
+<p>Once you are done, you can test that your install worked.</p>
+<section id="test-your-install-on-linux" class="level3">
+<h3 class="anchored" data-anchor-id="test-your-install-on-linux">Test your install on Linux</h3>
+<ol type="1">
+<li><p>Search for and open the Terminal program. In this <code>Terminal</code> window, type <code>bash</code> and hit enter. If you do not get a message back, then <code>Bash</code> is available for use.</p></li>
+<li><p>Next, type <code>git</code> and hit enter. If you see a list of commands that you can execute, then <code>Git</code> has been installed correctly.</p></li>
+<li><p>Next, type <code>conda</code> and hit enter. Again, if you see a list of commands that you can execute, then Mambaforge <code>Python</code> has been installed correctly.</p></li>
+<li><p>Close the <code>Terminal</code> by typing <code>exit</code>.</p></li>
+</ol>
+</section>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="callout callout-style-default callout-tip callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Windows Users:</strong> if you already have Anaconda installed, then you will be asked to confirm that you want to make the Mambaforge installation the default conda on your computer when you follow step 6 of the Mambaforge installation.</p>
+</div>
+</div>
+<p>Download the <a href="https://github.com/conda-forge/miniforge#mambaforge" target="_blank">Mambaforge installer for Windows</a>.</p>
+<p>Run the installer by double-clicking on the downloaded file and follow the steps below.</p>
+<ol type="1">
+<li>Click “Run”.</li>
+<li>Click on “Next”.</li>
+<li>Click on “I agree”.</li>
+<li>Leave the selection on “Just me” and click on “Next”.</li>
+<li>Click on “Next”.</li>
+<li><strong>Select the first option for “Add Anaconda to my PATH environment variable”</strong> and also <strong>leave the selection on “Register Anaconda as my default Python 3.x”.</strong> Click on “Install”.
+<ul>
+<li>Note that even though the installation is for Mambaforge, the installer uses the word Anaconda in these options.</li>
+<li>You will also see a message in red text that selecting “Add Anaconda to my PATH environment variable” is not recommended; continue with this selection to make using conda easier in Git Bash. If you have questions or concerns, please contact your instructor.</li>
+</ul></li>
+<li>When the install is complete, Click on “Next”.</li>
+<li>Click on “Finish”.</li>
+</ol>
+<p>Once you are done, you can test that the installation worked.</p>
+<section id="test-your-install-on-windows" class="level3">
+<h3 class="anchored" data-anchor-id="test-your-install-on-windows">Test your install on Windows</h3>
+<ol type="1">
+<li><p>Search for and open the <code>Git Bash</code> program. In this <code>Terminal</code> window, type <code>bash</code> and hit enter. If you do not get a message back, then <code>Bash</code> is available for use.</p></li>
+<li><p>Next, type <code>git</code> and hit enter. If you see a list of commands that you can execute, then <code>Git</code> has been installed correctly.</p></li>
+<li><p>Next, type <code>conda</code> and hit enter. Again, if you see a list of commands that you can execute, then Mambaforge <code>Python</code> has been installed correctly.</p></li>
+<li><p>Close the <code>Terminal</code> by typing <code>exit</code>.</p></li>
+</ol>
+</section>
+</div>
+</div>
+</div>
+<!-- Note that there are five types of callouts, including:
+`note`, `warning`, `important`, `tip`, and `caution`. -->
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../install-python/get-started-python.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Intro</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../install-python/create-conda-environment.html" class="pagination-link">
+        <span class="nav-page-text">Create Conda Environments</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Made with 💜, by Leah Wasser. A project supported by <a href="https://www.pyopensci.org">pyOpenSci</a> License: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lwasser/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/leahawasser">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://fosstodon.org/@leahawasser">
+      <i class="bi bi-mastodon" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:leahwasser@gmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
