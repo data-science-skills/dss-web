@@ -19,6 +19,8 @@ jobs:
         run: |
           quarto --version
           which python
+          mamba activate dataskills
+          mamba env list
           mamba list
 
       - name: Render website
