@@ -1,0 +1,16 @@
+name: dataskills
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.10
+  # Core scientific python
+  - numpy
+  
+  # Plotting
+  - matplotlib
+
+  # Jupyter
+  - jupyterlab
+  - notebook
+
