@@ -5,8 +5,11 @@ listing:
     contents: "*.qmd"
     type: grid
     sort: "date desc"
+
 page-layout: full
 toc: true
+module: "install-python"
+layout: "lessons"
 ---
 
 ::: {#get-started}

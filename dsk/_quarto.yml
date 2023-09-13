@@ -66,5 +66,5 @@ website:
 format:
   html:
     theme: minty
-    css: styles.css
+    css: pyos.scss
     toc: true

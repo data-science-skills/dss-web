@@ -11,6 +11,8 @@ categories:
   - Python
   - Get-started
   - Environment
+module: "install-python"
+layout: "lessons"
 toc: true
 image: "/images/python/create-conda-environment.png"
 ---

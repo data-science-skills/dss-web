@@ -14,6 +14,8 @@ categories:
   - Conda
 toc: true
 image: "/images/python/why-use-conda.png"
+module: "install-python"
+layout: "lessons"
 ---
 
 ## {{< fa graduation-cap >}} Learning Objectives

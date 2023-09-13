@@ -12,6 +12,8 @@ categories:
   - Environment
 toc: true
 image: "/images/python/python-environment-tips.png"
+module: "install-python"
+layout: "lessons"
 ---
 
 We've all been there... trying to import a package and python can't find it?

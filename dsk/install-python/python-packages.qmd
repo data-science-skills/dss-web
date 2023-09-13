@@ -11,6 +11,8 @@ categories:
   - Packages
 toc: true
 image: "/images/python/import-python-packages.png"
+module: "install-python"
+layout: "lessons"
 ---
 
 :::{.callout-note}
