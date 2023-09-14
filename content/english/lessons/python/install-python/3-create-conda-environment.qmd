@@ -1,0 +1,240 @@
+---
+title: "How to Create a Conda Environment For Your Python Workflow"
+subtitle: "Create reproducible conda environments using an environment.yml file."
+description: |
+  "Learn how to create a reproducible conda environment using environment.yml files. Best practices for scientists who want to create a Python environment containing different tools for different workflows."
+partner: "dss"
+author: "Leah Wasser"
+date: 2023-02-12
+nav_title: "Create conda environment"
+categories:
+  - Python
+  - Get-started
+  - Environment
+image: "/images/python/create-conda-environment.png"
+module: "install-python"
+order: 3
+---
+
+Jenny 
+
+```{=markdown}
+{{< toc >}}
+```
+
+# Work with Conda Environments
+
+In this lesson, you will learn how to install a conda environment from a `environment.yml`
+file. You will create and install a
+conda environment called `geo-python`. You can customize and rename this environment however you wish.
+
+:::{.callout-important}
+## <i class="fa-solid fa-graduation-cap"></i> Learning Objectives
+
+At the end of this activity, you will be able to:
+
+* Install a new environment using `mamba env create`.
+* View a list of the available conda environments using `mamba env list`.
+* Activate, update and delete conda environments using mamba.
+You should have **Bash** and the Miniconda distribution of **Python** 3.x setup on your computer. Be sure that you have:
+
+* Installed a conda Python distribution (preferably miniforge but this lesson will work with any conda distribution)
+* Installed `mamba`
+* Have Bash / Terminal working on your computer. [Click here if you haven't setup bash yet.](/use-git-github/setup-git-base)
+
+
+## <i class="fa-solid fa-square-check"></i> What You Need
+
+
+
+You should have **Bash** and the Miniforge distribution of **Python** 3.x setup on your compute.
+
+ Be sure you have:
+
+* Completed [the setup for Git, Bash and Conda](/use-git-github/setup-bash).
+:::
+
+
+## Why Use Conda Environments for Python
+
+Conda allows you to have different environments installed on your computer to access different versions of **Python** and different libraries.
+
+This is helpful as:
+
+* It allows you to have individual environments that are specific to particular workflows and projects
+* It allows you to install things in a contained environment that doesn't interfere or cause conflicts with other environments on your computer
+* It allows you to to test workflows on different versions of python on your computer.
+
+## Conda vs Mamba
+
+The termininolgy around conda vs mamba can a bit confusing when you are just
+getting strated.
+
+Anaconda: Anaconda, inc is a company that has a Python distribution called Anaconda. This distribution contains numerous packages and tools and is close to 2GB in size.
+Anaconda cloud: the anaconda cloud (anaconda.org) is a package repository (similar to pyPI) where conda packages are stored. The cloud has numerous channels or sub repositories including the default channel, conda-forge and bioconda. conda-forge is the most commonly used channel for scientific tools.
+Conda: is a package management tool that can be used to install packages from the anaconda cloud.
+Mamba: is a package management tool that is similar to conda, but because it's built using C++, it's much faster. I suggest that you use mamba instead of conda for all commands given it will be much faster when you installed an environment or new packages into your environment.
+
+For this lesson, I assume that [you've installed Python using mambaforge](install-python-conda.qmd). If you have another distribution sucha s minconda,
+or miniforge, you may need to install `mamba` for the commands below to work.
+
+Alternatively you can swap out `conda` for `mamba` to run all of the commands
+below! Just note that installation time for your environment will be much slower
+if you use conda!
+
+Note that it will take a significantly longer time to  install of the packages found in the geo-python environment using conda vs mamba! Also, note that you need to have internet access to install packages as conda and conda-forge are online repositories!
+
+## Install the geo-python Conda Environment
+
+In this lesson you can either chose to create your own environment file, or you can use an existing environment that is available on GitHub!
+
+If you wish to start with an existing environment, you can follow the instructions below:
+
+1. Fork and clone a GitHub repository from `https://github.com/lwasser/geo-python` to a location on your computer.
+    * This repository contains a file called `environment.yml` that contains the instructions to install the environment.
+2. If it's not already open, open the Terminal on your computer (e.g. Git Bash for Windows or Terminal on a Mac/Linux).
+3. In the Terminal, set your directory to the cloned `geo-python` dir using `cd` to change directories (e.g. `cd geo-python`).
+4. Once you are in the `geo-python` directory, you can create your environment. To do this run: `mamba env create -f environment.yml`.
+    * Once the environment is installed you can activate it using: `mamba activate geo-python`.
+5. To view a list of all conda environments available on your machine run: `mamba info --envs`.
+
+Note that it takes time to install of the packages found in the geo-python environment as it needs to download and install each library. Also, you need to have internet access for this to run!
+
+:::{.callout-note}
+
+The instructions above will only work if you run them in the directory where you placed the environment.yml file.
+:::
+
+:::{.callout-important}
+<i class="fa-solid fa-circle-exclamation"></i> **Windows Users:** A reminder that the lessons on this website assume that you are using Git Bash as your primary terminal.
+:::
+
+
+## About Conda Environments
+
+### What is a YAML (.yml) File?
+
+When you work with conda, you can create custom lists that tell conda where to install libraries from, and in what order. You can even specify a particular version.
+
+You write this list using  <a href="http://yaml.org/" target="_blank">YAML</a> (Yet Another Markup Language). This is an alternative to using `pip` to install **Python** packages.
+
+In previous steps, you used a custom .yml list to install all of the **Python** libraries that you will need to complete the **Python** lessons on this website. This .yml list is customized to install libraries from the repositories and in an order that minimizes conflicts.
+
+If you run into any issues installing the environment from the .yml, let us know!
+
+Next, explore your new conda environment. Here’s what part of the .yml file looks like:
+
+``` {.yaml filename="environment.yml"}
+name: geo-python
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.7
+  - pip
+  # Core scientific python
+  - numpy
+  - matplotlib
+```
+
+Notice at the top of the file there is the environment name. This file has a few key parts:
+
+1. Name: the name of the environment that you will call when you want to activate the environment. The name `geo-python` is defined in the environment.yml file.
+
+2. Channels: this list identifies where packages will be installed from. There are many options including conda, conda-forge and pip. You will be predominately using conda-forge for the `geo-python` environment.
+
+3. Dependencies: Dependencies are all of the things that you need installed in order for the environment to be complete. In the example, **Python** version 3.7 is specified. The order in which the libraries should be installed is also specified.
+
+
+## Use Conda Environments
+
+You can have different **Python** environments on your computer. Conda allows you to easily jump between environments using a set of commands that you run in your terminal.
+
+This section provides an overview of various commands to manage your conda environments.
+
+For more detailed instructions for using these commands, see [Installing Python Packages in Conda Environments](python-packages.qmd).
+
+Or, have a look at the <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#viewing-a-list-of-your-environments" target = "_blank">Conda documentation notes that review the steps below and more!</a>
+
+
+### View a List of All Installed Conda Environments
+
+You can see a list of all installed conda environments by typing:
+
+```bash
+
+conda info --envs
+
+```
+
+If you want to use a particular environment that you have installed on your computer, you need to activate it.
+
+For example, if a **Python** package such as `geopandas` is only installed in the `geo-python` environment, and not the default conda environment, you will not be able to access it (e.g. import it to `Jupyter Notebook`), unless you have the `geo-python` environment activated.
+
+
+### Activate a Conda Environment
+
+**To activate an environment**, use the Terminal to navigate to a directory on your computer where you have some code or a Jupyter notebook that you wish to work on using the `cd` command. Then, type the following command to activate the environment (e.g. `geo-python`):
+
+```bash
+mamba activate geo-python
+```
+
+<a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html" target="_blank">For older installations of conda (versions prior to 4.6)</a> on Mac, Linux, and Git Bash for Windows, type:
+
+```bash
+source activate geo-python
+```
+
+<i class="fa-solid fa-circle-exclamation"></i> **Windows Users:** The first time that you try to run the "mamba activate" command, you may be asked to configure Git Bash to use "mamba activate". You can do this by running the command "conda init bash", just one time. After that, Git Bash will be configured to use "mamba activate" moving forward.
+
+
+Once the environment is activated, the name of the activated environment will appear in parentheses on the left side of your terminal (e.g. `(geo-python`).
+
+:::{.callout-tip}
+
+## Data Tip
+Note that after you restart the Terminal, the `geo-python` environment is no longer active. You will need to activate the `geo-python` environment each time you start the Terminal by running the appropriate command provided above for your operating system.
+:::
+
+### Deactivate a Conda Environment
+
+If needed, you can deactivate a conda environment. Deactivating the environment switches you back to the default environment in your computer.
+
+```bash
+conda deactivate
+
+```
+
+###  Delete a Conda Environment
+
+If you ever want to delete an environment, you must first deactivate that environment and then type:
+
+```bash
+mamba env remove --name myenv
+```
+
+and replace `myenv` with the name of the environment that you want to remove.
+
+**Remember to never delete your root environment.**
+
+
+### Update a Conda Environment Using a YAML File
+
+Once you have created a conda environment, you can update it anytime by first activating the environment and then running the `mamba env update` command.
+
+The example below updates the `geo-python environment` using the `environment.yml` file. In this example, the command `mamba env update` is run in the same directory that contains the `environment.yml` file.
+
+```bash
+$ mamba activate geo-python
+$ mamba env update -f environment.yml
+```
+
+Running this command will update your current `geo-python` environment to include the most current versions of the packages listed in that environment file.
+
+
+Conda Resources:
+
+* Conda documentation for <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/" target="_blank">installing conda</a>
+* <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html" target="_blank">managing mamba environments</a>.

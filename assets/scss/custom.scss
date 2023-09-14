@@ -1,0 +1,63 @@
+
+.hero {
+position: relative;
+  margin-bottom: 2em;
+  padding: 3em 2em;
+  clear: both;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+  .title {
+        margin-bottom: 0!important;
+    }
+}
+
+  .hero-title {
+    margin-bottom: 0;
+  }
+  .tagline {
+
+  }
+}
+
+
+.notice.note {
+    border-color: #ccc;
+    background-color: #f1fffe;
+    color: #555;
+
+    & h2 {
+        font-size:1.5rem;
+    }
+  }
+
+ul.lesson-navigation {
+    a {
+    color: rgb(2, 132, 132);
+    }
+}
+
+figure {
+    font-weight: 600;
+}
+
+ul.lesson-navigation li.active {
+    list-style: disclosure-closed;
+    a {
+        color:#636262;
+    }
+}
+
+ul.lesson-navigation li {
+    list-style: none;
+
+}
+
+.highlight span {
+    margin-bottom: 0;
+  }

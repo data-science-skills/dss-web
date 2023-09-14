@@ -1,0 +1,30 @@
+{{define "main"}}
+
+{{ partial "page-header.html" . }}
+{{ $filteredPages := where .Site.Pages "Params.order" "eq" 1 }}
+
+layouts/lessons/LESSONS LIST
+
+<section id="open-position" class="section">
+  <div class="container">
+    <div class="row gx-md-5 gy-5">
+      {{ range $filteredPages }}
+      <div class="col-lg-6 col-md-6">
+        <div class="p-5 border rounded-2 h-100 is-hoverable position-relative">
+          {{ if .Params.module_title }}
+          <h5 class="mb-2">{{.Params.module_title | markdownify}}</h5>
+          {{ else }}
+          <h5 class="mb-2">{{.Params.title | markdownify}}</h5>
+          {{ end }}
+          <p><span>Estimated Level: {{.Params.difficulty | markdownify}}</span> | {{.Params.category | markdownify}}</p>
+          <p>Total lessons: 9999 | Estimated time: 2-3 hours</p>
+          {{.Params.module_description | markdownify}}
+          <a href="{{.RelPermalink}}" class="mb-0 text-primary fw-500 mt-2 btn-link stretched-link">{{i18n `start_learning`}} <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+
+{{end}}
