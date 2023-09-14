@@ -3,9 +3,9 @@
 # Pyre type checker
 .pyre/
 
+ delete-datascience-skills/*
 /.luarc.json
-
-
+_drafts/*
 dsk/.gitignore
 dsk/_extensions/
 dsk/_site/
@@ -14,3 +14,10 @@ dsk/index.css
 dsk/styles.css
 dsk/use-git-github/_metadata.yml
 dsk/use-git-github/fork-github-repo.qmd
+
+/.quarto/
+
+.hugo_build.lock
+public/*
+old-README.md
+old/*
