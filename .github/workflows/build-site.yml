@@ -23,7 +23,7 @@ jobs:
 
       - name: Render website
         run: |
-          quarto render dsk/
+          quarto render
           ls
 
       # Push the book's HTML to github-pages
