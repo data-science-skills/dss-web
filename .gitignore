@@ -21,3 +21,12 @@ dsk/use-git-github/fork-github-repo.qmd
 public/*
 old-README.md
 old/*
+themes/bigspring-hugo/.editorconfig
+themes/bigspring-hugo/.github/
+themes/bigspring-hugo/.gitignore
+themes/bigspring-hugo/.gitlab-ci.yml
+themes/bigspring-hugo/.jshintrc
+themes/bigspring-hugo/.prettierrc
+themes/bigspring-hugo/.vscode/
+node_modules/*
+resources/*
