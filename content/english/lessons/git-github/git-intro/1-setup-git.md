@@ -1,6 +1,6 @@
 ---
 title: "Git Started: Setup Bash & Git"
-subtitle: "install and setup...."
+subtitle: "Learn how to setup bash and git on your computer."
 description: "Learn how to setup bash on Windows, Mac and Linux operating systems."
 author: "Leah Wasser"
 authors: 
