@@ -31,7 +31,7 @@ order: 1
 
 ## Bash Setup
 
-{{< tabs "tabset-1" >}}
+{{< tabs "tabset-shell" >}}
 
 {{< tab "Mac OS X" >}}
 The default shell in all versions of Mac OS X is `Bash`, so no need to install
@@ -81,7 +81,7 @@ You will need a <a href="https://help.github.com/articles/supported-browsers/" t
 
 `Git` installation instructions borrowed and modified from <a href="http://software-carpentry.org/" target="_blank">Software Carpentry</a>.
 
-{{< tabs "tabset-1" >}}
+{{< tabs "tabset-git" >}}
 
 {{< tab "Mac OS X" >}}
 
