@@ -10,6 +10,8 @@ This is a hugo-driven website that power powered by Quarto to build lessons.
 
 ## To build locally
 
+<instructions - https://docs.gethugothemes.com/bigspring/installation/>
+
 1. install quarto and hugo and go 
 2. run `npm install` to install all of the needed dependencies for the site. 
 
@@ -43,7 +45,6 @@ $ quarto preview
 3. update modules
 
 `hugo mod get -u`
-
 
 
 2. Lessons that have code that runs should be written as .qmd files.
@@ -115,6 +116,16 @@ an error.
 {{< toc >}}
 ```
 ````
+
+## GitHub action build / docker container
+
+The github action that builds the site uses the dss-mamba container as a base. 
+this container contains hugo, quarto, nodejs and other needed deps
+
+https://github.com/data-science-skills/dss-mamba
+
+
+
 ## Lesson front matter
 
 ```

@@ -5,13 +5,4 @@ title = 'Data Science Skills'
 # This may need to go in the config directory in that file??
 
 # For quarto support don't publish these formats
-ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.py$"]
-
-[markup]
-defaultMarkdownHandler = "goldmark"
-
-[markup.goldmark.renderer]
-unsafe = true
-
-[[params.plugins.js]]
-link = "js/tab.js"
+ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.py$", "_drafts/\\.qmd"]

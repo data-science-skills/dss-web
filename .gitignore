@@ -21,6 +21,7 @@ dsk/use-git-github/fork-github-repo.qmd
 public/*
 old-README.md
 old/*
+resources/*
 themes/bigspring-hugo/.editorconfig
 themes/bigspring-hugo/.github/
 themes/bigspring-hugo/.gitignore
@@ -30,3 +31,7 @@ themes/bigspring-hugo/.prettierrc
 themes/bigspring-hugo/.vscode/
 node_modules/*
 resources/*
+hugo_stats.json
+netlify.toml
+node_modules/*
+*.ipynb
