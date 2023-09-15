@@ -44,7 +44,7 @@ jobs:
         continue-on-error: false
         run: |
           # Render quarto qmd files --> md
-          # quarto render
+          quarto render
           npm run build
 
       - name: View site files
