@@ -1,8 +1,3 @@
-baseURL = 'http://datascienceskills.org/'
-languageCode = 'en-us'
-title = 'Data Science Skills'
-
-# This may need to go in the config directory in that file??
 
 # For quarto support don't publish these formats
-ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.py$", "_drafts/\\.qmd"]
+ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.py$"]
