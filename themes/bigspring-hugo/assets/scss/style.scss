@@ -25,6 +25,8 @@ $font-secondary: '{{replace (replaceRE ":[ital,]*[ital@]*[wght@]*[0-9,;]+" "" .f
 $font-icon: '{{.font_icon | default "Font Awesome 6 Free"}}';
 {{ end }}
 
+
+@import 'noticeowl';
 @import 'templates/bootstrap';
 @import 'mixins';
 @import 'buttons';
@@ -33,7 +35,7 @@ $font-icon: '{{.font_icon | default "Font Awesome 6 Free"}}';
 @import 'common-dark';
 @import 'templates/navigation';
 @import 'templates/main';
-@import 'notice';
+@import 'owl_code';
 @import 'tab';
 @import 'images';
 // @import 'gallery-slider';

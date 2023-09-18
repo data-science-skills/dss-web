@@ -23,8 +23,9 @@ order: 1
 {{< toc >}}
 ```
 
-::: {.callout-important}
-##  <i class="fa-solid fa-graduation-cap"></i> Learning Objectives
+
+```{=markdown}
+{{< noticeowl "learn" >}}
 
 At the end of this activity, you will be able to:
 
@@ -33,7 +34,9 @@ At the end of this activity, you will be able to:
 <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> **What You Need**
 
 Before you start this lesson, be sure that you have a computer with internet access.
-:::
+
+{{{< /noticeowl >}}}
+```
 
 # How to Install a Lightweight Python Distribution Using Conda
 
@@ -54,7 +57,8 @@ uses the conda-forge conda channel. This channel is ideal for installing
 scientific tools and will result in cleaner, easier to use environments with
 fewer conflicts.
 
-::: {.callout-note}
+```{=markdown}
+{{< noticeowl "note" >}}
 
 ## The many other ways to install Python
 
@@ -65,16 +69,28 @@ You can also install Python by:
   1. It has many additional packages that you might not need.
   2. Because it installs using the default conda channel it also could result in dependency conflicts if you have other scientific packages that you may want to install using the conda-forge channel.
 * Using **Miniconda**: The miniconda distribution, also provided by Anaconda, Inc is a smaller distribution than Anaconda. While it hs fewer packages and is smaller in size than the Anaconda, this distribution still installs packages using the conda **defaults** channel. This means that you may still encounter environmentl conflicts if you use it. Thus we still recommend that you install mambaforge.
-:::
+{{{< /noticeowl >}}}
 
-::: {.callout-tip}
+```
+
+
+
+
+````{=markdown}
+{{< noticeowl "tip" >}}
 If you are a GIS user and on some versions of the MAC operating system, you will also find an existing **Python** distribution on your computer. A quick way to figure out if **Python** already exists on your computer is to open up
 terminal or bash and run:
 
+```bash
+➜ which python
+
+/path/to-your-python-install/mambaforge/bin/python
 ```
-which python
-```
-:::
+{{{< /noticeowl >}}}
+
+````
+
+
 
 In this lesson, you will learn how to install the mambaforge **Python**
 distribution on your computer.
@@ -104,7 +120,9 @@ Below is a quick comparison of all 4 distributions.
 
 ## Install Mambaforge from the conda-forge channel
 
-:::{.callout-tip}
+```{=markdown}
+{{< noticeowl "tip" >}}
+
 ## For Anaconda Users
 
 If you want to use mambaforge, we strongly suggest that you uninstall Anaconda.
@@ -112,10 +130,15 @@ If you have environments that you are woried about losing, then you can install
 mambaforge following the instructions listed below to overwrite the default
 conda channels.
 
-:::
+{{{< /noticeowl >}}}
+```
 
 ### Installation instructions by operating system
-::: {.panel-tabset}
+
+```{=markdown}
+{{< tabs "tabset-shell" >}}
+
+{{< tab "Mac OS X" >}}
 
 ## Mac
 
@@ -168,6 +191,10 @@ Again, if you see a list of commands that you can execute, then Mambaforge `Pyth
 
 4. Close the `Terminal` by typing `exit`.
 
+{{{< /tab >}}}
+
+{{< tab "Linux" >}}
+
 ## Linux
 
 1. Download the installer: <a href="https://github.com/conda-forge/miniforge#mambaforge" target="_blank">Mambaforge installer for Linux</a>.
@@ -197,13 +224,20 @@ Again, if you see a list of commands that you can execute, then Mambaforge `Pyth
 
 4. Close the `Terminal` by typing `exit`.
 
+{{{< /tab >}}}
+
+{{< tab "Windows" >}}
+
 ## Windows
 
-:::{.callout-tip}
+{{< noticeowl "tip" >}}
+
 **Windows Users:** if you already have Anaconda installed, then you will be
 asked to confirm that you want to make the Mambaforge installation the default
 conda on your computer when you follow step 6 of the Mambaforge installation.
-:::
+
+{{{< /noticeowl >}}}
+
 
 Download the <a href="https://github.com/conda-forge/miniforge#mambaforge" target="_blank">Mambaforge installer for Windows</a>.
 
@@ -235,7 +269,7 @@ If you see a list of commands that you can execute, then `Git` has been installe
 Again, if you see a list of commands that you can execute, then Mambaforge `Python` has been installed correctly.
 
 4. Close the `Terminal` by typing `exit`.
-:::
 
-<!-- Note that there are five types of callouts, including:
-`note`, `warning`, `important`, `tip`, and `caution`. -->
+{{{< /tab >}}}
+{{{< /tabs >}}}
+```

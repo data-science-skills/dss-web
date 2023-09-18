@@ -11,6 +11,7 @@ nav_title: "Use Python packages"
 partner: "dss"
 image: "/images/python/import-python-packages.png"
 module: "install-python"
+format: hugo-md
 order: 4
 ---
 
@@ -18,13 +19,13 @@ order: 4
 {{< toc >}}
 ```
 
-:::{.callout-note}
-
-## <i class="fa fa-ship" aria-hidden="true"></i> Import and Install Python Packages for Science
+Import and Install Python Packages for Science
 
 Learn about managing Python packages in your code.
 
-## <i class="fa-solid fa-graduation-cap"></i> Learning Objectives
+
+```{=markdown}
+{{< noticeowl "learn" >}}
 
 After completing this chapter, you will be able to:
 
@@ -36,7 +37,8 @@ After completing this chapter, you will be able to:
 
 You should have Bash and Conda setup on your computer and a conda environment such as `geo-python`. Follow the <a href="/setup-geo-python/">Setup Git, Bash, and Conda on your computer</a> to install these tools.
 
-:::
+{{{< /noticeowl >}}}
+```
 
 ## What is a Python Package
 
@@ -84,10 +86,14 @@ Once packages are installed in your **Python** environment (e.g. `geo-python` co
 
 You have to explicitly call and load (i.e. import) each package that you want to use in your script (.py file) or **Jupyter Notebook** file, in order for the functions (or tools) in that package to be available for use in your code.
 
-:::{.callout-tip}
 
-## Data Tip  You can import `Python` packages using `import package-name`. Once a package has been imported, you can call functions from that package
-:::
+```{=markdown}
+{{< noticeowl "tip" >}}
+
+You can import `Python` packages using `import package-name`. Once a package has been imported, you can call functions from that package
+
+{{{< /noticeowl >}}}
+```
 
 
 ### Python Packages Can Contain Modules
@@ -98,8 +104,34 @@ Every **Python** package should have a unique name. This allows you to import th
 
 For example, the command below imports the **matplotlib** package.
 
-```python
+```{python}
 import matplotlib
+```
+
+
+Now you can create a plot but notice that you have to call 
+matplotlib as a full word each time you run a plot command below.
+
+```{python}
+#| fig-cap: "A basic line plot"
+#| fig-alt: "Here is the alt tag"
+
+import matplotlib
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+
+# Create a basic plot
+matplotlib.pyplot.plot(x, y)
+
+# Add labels and title
+matplotlib.pyplot.xlabel("X-axis")
+matplotlib.pyplot.ylabel("Y-axis")
+matplotlib.pyplot.title("Simple Matplotlib Plot")
+
+# Show the plot
+matplotlib.pyplot.show()
 ```
 
 ### What is a Module in a Python Package?
@@ -115,9 +147,69 @@ import matplotlib.pyplot
 
 ```
 
-You can also import the module using an alias or short name, such as `plt` for `matplotlib.pyplot`.
+You can also import the module using an alias or short name, such as `plt` for `matplotlib.pyplot`. 
 
-```python
+```{python}
 import matplotlib.pyplot as plt
+
+```
+
+Below you import both matplotlib and numpy to create a plot. 
+
+
+```{python}
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate some sample data
+x = np.linspace(0, 2 * np.pi, 100)
+y = np.sin(x)
+
+# Create a prettier plot
+plt.figure(figsize=(8, 6))  # Set the figure size
+plt.plot(
+    x,
+    y,
+    label="Sine Wave",
+    color="b",
+    linewidth=2,
+    linestyle="-",
+    marker="o",
+    markersize=6,
+    markerfacecolor="r",
+)
+plt.title("Prettier Matplotlib Plot")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.grid(True, linestyle="--", alpha=0.7)
+plt.legend(loc="upper right")
+plt.tight_layout()  
+
+# Show the plot
+plt.show()
+
+```
+
+And an interactive plot...
+
+```{python}
+
+from bokeh.plotting import figure, show
+
+# Sample data
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+
+# Create a Bokeh figure
+p = figure(
+    title="Simple Bokeh Plot", x_axis_label="X-axis", y_axis_label="Y-axis"
+)
+
+# Add a line plot
+p.line(x, y, line_width=2, legend_label="Line")
+
+# Display the plot
+show(p)
 
 ```

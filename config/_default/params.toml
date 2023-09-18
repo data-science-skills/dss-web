@@ -1,6 +1,6 @@
 #################### default parameters ################################
 # favicon
-favicon = "images/favicon.png"
+favicon = "images/favicon-16x16.png"
 # logo
 logo = "images/dss-owl-logo-light.png"
 logo_darkmode = "images/dss-owl-logo-dark.png"

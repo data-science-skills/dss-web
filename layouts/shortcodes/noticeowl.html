@@ -1,0 +1,54 @@
+{{ $type:= .Get 0 }}
+
+{{ range $i, $e:= .Params }}
+  {{ if eq $i "type" }}{{ $type = $e }}{{ end }}
+{{ end }}
+
+
+<div class="notice {{ $type }}">
+  <div class="notice-head">
+    {{ if eq $type "tip2" }}
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM12 2.4C6.69807 2.4 2.4 6.69807 2.4 12C2.4 17.3019 6.69807 21.6 12 21.6C17.3019 21.6 21.6 17.3019 21.6 12C21.6 6.69807 17.3019 2.4 12 2.4ZM15.9515 7.55147L9.6 13.9029L8.04853 12.3515C7.5799 11.8828 6.8201 11.8828 6.35147 12.3515C5.88284 12.8201 5.88284 13.5799 6.35147 14.0485L8.75147 16.4485C9.2201 16.9172 9.9799 16.9172 10.4485 16.4485L17.6485 9.24853C18.1172 8.7799 18.1172 8.0201 17.6485 7.55147C17.1799 7.08284 16.4201 7.08284 15.9515 7.55147Z"
+          fill="currentColor" />
+      </svg>
+
+    {{ else if eq $type "exercise" }}
+    <p><i class="fa-solid fa-pencil" aria-hidden="true"></i>  Try it yourself</p>
+  
+    {{ else if eq $type "learn" }}
+    <p><i class="fa fa-graduation-cap" aria-hidden="true"></i>  Learning Objectives</p>
+
+    {{ else if eq $type "tip" }}
+
+    <p><i class="fa fa-star" aria-hidden="true"></i>  Tip</p>
+      
+    {{ else if eq $type "warning" }}
+    <p><i class="fa fa-star" aria-hidden="true"></i>  Warning</p>
+    {{ else }}
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M10 9V14M10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 14.9706 14.9706 19 10 19ZM10.0498 6V6.1L9.9502 6.1002V6H10.0498Z"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    {{ end }}
+    <!-- <p>{{ $type | title }}</p> -->
+  </div>
+  <div class="notice-body"><p>{{ .Inner | markdownify }}</p></div>
+</div>

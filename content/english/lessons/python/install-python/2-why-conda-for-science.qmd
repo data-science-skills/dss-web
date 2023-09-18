@@ -3,7 +3,9 @@ title: "Why Conda is Better for Scientific Environments"
 subtitle: "Learn why conda can make installing creating environments easier for scientists."
 description: |
   A conda environment is a self contained Python environment that allows you to run different versions of Python (with different installed packages) on your computer. Learn how to conda environments can you help manage Python packages and dependencies.
-author:  "Will Norris"
+authors:  
+  - "Will Norris"
+  - "Leah Wasser"
 date: 2023-02-12
 partner: "dss"
 categories:
@@ -12,18 +14,28 @@ categories:
   - Environment
   - Conda
 nav_title: "Why conda for science?"
-toc: true
 image: "/images/python/why-use-conda.png"
 module: "install-python"
 order: 2
 ---
 
-Add leah
+```{=markdown}
+{{< toc >}}
+```
 
-## <i class="fa-solid fa-graduation-cap"></i> Learning Objectives
+
+
+
+```{=markdown}
+{{< noticeowl "learn" >}}
+
+After completing this page, you will be able to:
 
 * Understand how dependency management can play a large role in **Python** programming.
 * Explain how to use **conda** environments to manage your third party libraries.
+
+{{{< /noticeowl >}}}
+```
 
 
 ## Conda Environments in Python
@@ -38,7 +50,10 @@ While having a plethora of open source functionality available to the community 
 
 In **Python**, regardless of what project you are working on, your computer will store third party libraries in the same location. This means that if you depend on GDAL 2.4.2 in an older project and GDAL 3.0.1 in your brand new project, you will need a way to store these dependencies separately. If they aren't stored separately, **Python** will not be able to tell the difference between the two that are both installed in the same location.
 
-![Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues. Image from XKCD Webcomic. Licensed here: https://xkcd.com/license.html.](../images/python/xkcd-python-environment-mess.png "Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues. Image from XKCD Webcomic. Licensed here: https://xkcd.com/license.html. "){fig-alt="Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues"}
+
+```{=markdown}
+{{< image src="images/python/xkcd-python-environment-superfund.jpg" caption="Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues. Image from XKCD Webcomic. Source: XKCD" alt="An image showing a spaghtee monster like web of things installed on a computer including various versions of python installed different ways. At the bottom it says my laptop has become a superfund site." width="600" position="center" command="fit" option="q100" class="img-fluid" title="image title" >}}
+```
 
 ### Python Environments
 
@@ -110,12 +125,15 @@ While they both install packages, **conda** is very different than **pip**. **Co
 For a simple workflow, the benefits of **conda** may not be worth the extra effort to get up and running. For working with geospatial libraries, **conda** is definitely preferred, given it's ability to resolve
 dependency issues associated with **GDAL**.
 
-:::{.callout-tip}
 
-## Data Tip
-Sometimes **Python** libraries are on `Github.com`. You can install **Python** libraries from `Github.com` using `pip install git+git://github.com/path-to-github-user/repo-name.git`
 
-:::
+```{=markdown}
+{{< noticeowl "tip" >}}
+
+Sometimes **Python** libraries are on Github and not on a repository like PyPI. In this case, or in the case that you want to install a specific development version of a package, you can install **Python** libraries from Github using `pip install git+git://github.com/path-to-github-user/repo-name.git`
+
+{{{< /noticeowl >}}}
+```
 
 ## Channels in Conda
 

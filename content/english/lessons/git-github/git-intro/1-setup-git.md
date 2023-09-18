@@ -3,7 +3,7 @@ title: "Git Started: Setup Bash & Git"
 subtitle: "Learn how to setup bash and git on your computer."
 description: "Learn how to setup bash on Windows, Mac and Linux operating systems."
 author: "Leah Wasser"
-authors: 
+authors:
   - "Leah Wasser"
   - "Jenny Palomino"
 categories: ["collaboration-version-control"]
@@ -22,12 +22,17 @@ order: 1
 
 ## Setup Bash / Terminal
 
-> **Important**
->
-> At the end of this lesson you will know how to:
->
-> -   Install `Bash` and `Git`.
-> -   Open a terminal and test that `Bash`, `Git` are running properly on your machine.
+Learn how to setup git and Bash on your computer so you can
+get started using git for version control and.
+
+{{< noticeowl "learn" >}}
+
+At the end of this lesson you will know how to:
+
+- Install `Bash` and `Git`.
+- Open a terminal and test that `Bash`, `Git` are running properly on your machine.
+
+{{< /noticeowl >}}
 
 ## Bash Setup
 
@@ -59,9 +64,9 @@ Run the installer by double-clicking on the downloaded file and by following the
 4. Click on "Next".
 5. Click on "Next".
 6. Click on "Next".
-7. **Leave the selection on  "Git from the command line and also from 3rd party software"** and click on "Next". NOTE: If you forgot to do this, the programs that you need for the workshop will not work properly. If this happens, rerun the installer and select the appropriate option.
+7. **Leave the selection on "Git from the command line and also from 3rd party software"** and click on "Next". NOTE: If you forgot to do this, the programs that you need for the workshop will not work properly. If this happens, rerun the installer and select the appropriate option.
 8. Click on "Next".
-9. **Leave the selection on  "Checkout Windows-style, commit Unix-style line endings"** and click on “Next”.
+9. **Leave the selection on "Checkout Windows-style, commit Unix-style line endings"** and click on “Next”.
 10. Select the second option for **Use Windows' default console window** and click on "Next".
 11. Click on "Next".
 12. Click on "Install".
@@ -92,6 +97,7 @@ Install `Git` on Macs by downloading and running the most recent installer for "
 After installing `Git`, there will not be anything in your /Applications folder, as `Git` is a command line program.
 
 #### Data Tip
+
 If you are running Mac OSX El Capitan, you might encounter errors when trying to use `Git`. Make sure you update XCODE. <a href="http://stackoverflow.com/questions/32893412/command-line-tools-not-working-os-x-el-capitan" target="_blank">Read more - a Stack Overflow Issue</a>.
 
 {{< /tab >}}

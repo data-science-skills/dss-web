@@ -14,6 +14,7 @@ partner: dss
 estimated-time: "2 3 hours"
 difficulty: "beginner"
 module: "intro-git"
+url: /git-intro/about-version-control.html
 order: 2
 ---
 
@@ -21,13 +22,14 @@ order: 2
 {{< toc >}}
 ```
 
-::: callout-note
-
-## <i class="fa fa-ship" aria-hidden="true"></i> Get Started With Git/GitHub.com
+# Get Started With Git/GitHub.com
 
 Learn about the benefits of version control for tracking and managing changes
 to your files. You will also learn how to implement version control using
 **git** and then upload changes to **Github.com**.
+
+```{=markdown}
+{{< noticeowl "learn" >}}
 
 After completing this module, you will be able to:
 
@@ -35,13 +37,14 @@ After completing this module, you will be able to:
 - Explain why **version control** is useful in a scientific workflow.
 - Implement version control using **git**.
 
-#### <i class="fa-regular fa-square-check"></i> What You Need
+## <i class="fa-regular fa-square-check"></i> What You Need
 
 Be sure that you have completed the instructions on [Setting up Git, Bash, and Conda on your computer](/git/setup-git-bash) to install the tools for your operating system (Windows, Mac, Linux).
 
 You will also need a web browser and your **GitHub.com** login (username and password).
 
-:::
+{{{< /noticeowl >}}}
+```
 
 ## What is Version Control?
 

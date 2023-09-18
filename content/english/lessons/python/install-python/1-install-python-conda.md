@@ -20,16 +20,17 @@ order: 1
 ---
 
 {{< toc >}}
+{{< noticeowl "learn" >}}
 
-> **<i class="fa-solid fa-graduation-cap"></i> Learning Objectives**
->
-> At the end of this activity, you will be able to:
->
-> -   Install the lightweight Mambaforge **Python** distribution which uses the conda-forge channel as a default.
->
-> <i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> **What You Need**
->
-> Before you start this lesson, be sure that you have a computer with internet access.
+At the end of this activity, you will be able to:
+
+* Install the lightweight  Mambaforge **Python** distribution which uses the conda-forge channel as a default.
+
+<i class="fa fa-check-square-o fa-2" aria-hidden="true"></i> **What You Need**
+
+Before you start this lesson, be sure that you have a computer with internet access.
+
+{{< /noticeowl >}}
 
 # How to Install a Lightweight Python Distribution Using Conda
 
@@ -50,22 +51,31 @@ uses the conda-forge conda channel. This channel is ideal for installing
 scientific tools and will result in cleaner, easier to use environments with
 fewer conflicts.
 
-> **The many other ways to install Python**
->
-> You can also install Python by:
->
-> -   Using ***Homebrew***
-> -   Installing the entire **Anaconda distribution**: This is a large distribution maintained by Anaconda, Inc. It is not recommended for your initial setup as
->     1.  It has many additional packages that you might not need.
->     2.  Because it installs using the default conda channel it also could result in dependency conflicts if you have other scientific packages that you may want to install using the conda-forge channel.
-> -   Using **Miniconda**: The miniconda distribution, also provided by Anaconda, Inc is a smaller distribution than Anaconda. While it hs fewer packages and is smaller in size than the Anaconda, this distribution still installs packages using the conda **defaults** channel. This means that you may still encounter environmentl conflicts if you use it. Thus we still recommend that you install mambaforge.
+{{< noticeowl "note" >}}
 
-> **Tip**
->
-> If you are a GIS user and on some versions of the MAC operating system, you will also find an existing **Python** distribution on your computer. A quick way to figure out if **Python** already exists on your computer is to open up
-> terminal or bash and run:
->
->     which python
+## The many other ways to install Python
+
+You can also install Python by:
+
+* Using ***Homebrew***
+* Installing the entire **Anaconda distribution**: This is a large distribution maintained by Anaconda, Inc. It is not recommended for your initial setup as
+  1. It has many additional packages that you might not need.
+  2. Because it installs using the default conda channel it also could result in dependency conflicts if you have other scientific packages that you may want to install using the conda-forge channel.
+* Using **Miniconda**: The miniconda distribution, also provided by Anaconda, Inc is a smaller distribution than Anaconda. While it hs fewer packages and is smaller in size than the Anaconda, this distribution still installs packages using the conda **defaults** channel. This means that you may still encounter environmentl conflicts if you use it. Thus we still recommend that you install mambaforge.
+{{< /noticeowl >}}
+
+{{< noticeowl "tip" >}}
+If you are a GIS user and on some versions of the MAC operating system, you will also find an existing **Python** distribution on your computer. A quick way to figure out if **Python** already exists on your computer is to open up
+terminal or bash and run:
+
+```bash
+➜ which python
+
+/path/to-your-python-install/mambaforge/bin/python
+```
+
+
+{{< /noticeowl >}}
 
 In this lesson, you will learn how to install the mambaforge **Python**
 distribution on your computer.
@@ -86,39 +96,49 @@ Below is a quick comparison of all 4 distributions.
 
 | Tool                      | Mambaforge                 | Miniforge          | <a href="https://docs.anaconda.com/anaconda/" target = "_blank">Anaconda</a>     | <a href="https://conda.io/projects/conda/en/latest/user-guide/install/index.html" target = "_blank">Miniconda</a> |
 |:-------------|:-------------|:-------------|:-------------|:---------------|
-| **Size**                  | \~62mb                     | \~42MB             | Large \~2GB                                                                      | Small \~43MB                                                                                                      |
+| **Size**                  | ~62mb                      | ~42MB              | Large ~2GB                                                                       | Small ~43MB                                                                                                       |
 | **What's installed**      | Conda, Core Python + Mamba | Conda, Core Python | Installs Anaconda Navigator, Spyder, and many other tools that may not be needed | Conda, Core Python                                                                                                |
 | **Default conda channel** | conda-forge                | conda-forge        | conda default                                                                    | conda default                                                                                                     |
 | **Default tool manager ** | mamba                      | conda              | conda                                                                            | conda                                                                                                             |
 
 ## Install Mambaforge from the conda-forge channel
 
-> **For Anaconda Users**
->
-> If you want to use mambaforge, we strongly suggest that you uninstall Anaconda.
-> If you have environments that you are woried about losing, then you can install
-> mambaforge following the instructions listed below to overwrite the default
-> conda channels.
+{{< noticeowl "tip" >}}
+
+## For Anaconda Users
+
+If you want to use mambaforge, we strongly suggest that you uninstall Anaconda.
+If you have environments that you are woried about losing, then you can install
+mambaforge following the instructions listed below to overwrite the default
+conda channels.
+
+{{< /noticeowl >}}
 
 ### Installation instructions by operating system
 
+{{< tabs "tabset-shell" >}}
+
+{{< tab "Mac OS X" >}}
+
 ## Mac
 
-> **For homebrew Users**
->
-> If you have homebrew installed, then the easiest way to install mambaforge is
-> to use:
->
-> `brew install mambaforge`
->
-> [Find directions for installing homebrew here.](https://brew.sh/)
+:::{.callout-tip}
+### For homebrew Users
+
+If you have homebrew installed, then the easiest way to install mambaforge is
+to use:
+
+`brew install mambaforge`
+
+[Find directions for installing homebrew here.](https://brew.sh/)
+:::
 
 If you don't have homebrew, you can download a mamba installer and use bash
 to install it.
 
-1.  Download the installer: <a href="https://github.com/conda-forge/miniforge#mambaforge" target="_blank">Mambaforge installer for Mac</a>. Note that if you have a newer
-    mac with a m1 or m2 chip, then you will want to install the Apple Silicon
-    version:
+1. Download the installer: <a href="https://github.com/conda-forge/miniforge#mambaforge" target="_blank">Mambaforge installer for Mac</a>. Note that if you have a newer
+mac with a m1 or m2 chip, then you will want to install the Apple Silicon
+version:
 
 `OS X   arm64 (Apple Silicon)   Mambaforge-MacOSX-arm64`
 
@@ -126,98 +146,109 @@ If you have an older mac use
 
 `OS X   x86_64  Mambaforge-MacOSX-x86_64`
 
-1.  In your Terminal window, cd to the location of the download file. Run:
+2. In your Terminal window, cd to the location of the download file. Run:
 
 `bash Mambaforge3-latest-MacOSX-modify-filename-here.sh`.
 
-1.  Follow the prompts on the installer screens.
+3. Follow the prompts on the installer screens.
 
-2.  If you are unsure about any setting, accept the defaults. You can change them later.
+4. If you are unsure about any setting, accept the defaults. You can change them later.
 
-3.  To make sure that the changes take effect, close and then re-open your Terminal window.
+5. To make sure that the changes take effect, close and then re-open your Terminal window.
 
 Once you are done you can test that the install worked.
 
 ### Test your install on Mac
 
-1.  Search for and open the Terminal program (found in /Applications/Utilities). In this `Terminal` window, type `bash` and hit enter.
-    If you do not get a message back, then `Bash` is available for use.
+1. Search for and open the Terminal program (found in /Applications/Utilities). In this `Terminal` window, type `bash` and hit enter.
+If you do not get a message back, then `Bash` is available for use.
 
-2.  Next, type `git` and hit enter.
-    If you see a list of commands that you can execute, then `Git` has been installed correctly.
+2. Next, type `git` and hit enter.
+If you see a list of commands that you can execute, then `Git` has been installed correctly.
 
-3.  Next, type `conda` and hit enter.
-    Again, if you see a list of commands that you can execute, then Mambaforge `Python` has been installed correctly.
+3. Next, type `conda` and hit enter.
+Again, if you see a list of commands that you can execute, then Mambaforge `Python` has been installed correctly.
 
-4.  Close the `Terminal` by typing `exit`.
+4. Close the `Terminal` by typing `exit`.
+
+{{< /tab >}}
+
+{{< tab "Linux" >}}
 
 ## Linux
 
-1.  Download the installer: <a href="https://github.com/conda-forge/miniforge#mambaforge" target="_blank">Mambaforge installer for Linux</a>.
+1. Download the installer: <a href="https://github.com/conda-forge/miniforge#mambaforge" target="_blank">Mambaforge installer for Linux</a>.
 
-2.  In your Terminal window, run making sure to modify the file name to match the file that you downloaded:
+2. In your Terminal window, run making sure to modify the file name to match the file that you downloaded:
 
 `bash Mambaforge3-latest-Linux-modify-file-name-here.sh`.
 
-1.  Follow the prompts on the installer screens.
+3. Follow the prompts on the installer screens.
 
-2.  If you are unsure about any setting, accept the defaults. You can change them later.
+4. If you are unsure about any setting, accept the defaults. You can change them later.
 
-3.  To make sure that the changes take effect, close and then re-open your Terminal window.
+5. To make sure that the changes take effect, close and then re-open your Terminal window.
 
 Once you are done, you can test that your install worked.
 
 ### Test your install on Linux
 
-1.  Search for and open the Terminal program. In this `Terminal` window, type `bash` and hit enter.
-    If you do not get a message back, then `Bash` is available for use.
+1. Search for and open the Terminal program. In this `Terminal` window, type `bash` and hit enter.
+If you do not get a message back, then `Bash` is available for use.
 
-2.  Next, type `git` and hit enter.
-    If you see a list of commands that you can execute, then `Git` has been installed correctly.
+2. Next, type `git` and hit enter.
+If you see a list of commands that you can execute, then `Git` has been installed correctly.
 
-3.  Next, type `conda` and hit enter.
-    Again, if you see a list of commands that you can execute, then Mambaforge `Python` has been installed correctly.
+3. Next, type `conda` and hit enter.
+Again, if you see a list of commands that you can execute, then Mambaforge `Python` has been installed correctly.
 
-4.  Close the `Terminal` by typing `exit`.
+4. Close the `Terminal` by typing `exit`.
+
+{{< /tab >}}
+
+{{< tab "Windows" >}}
 
 ## Windows
 
-> **Tip**
->
-> **Windows Users:** if you already have Anaconda installed, then you will be
-> asked to confirm that you want to make the Mambaforge installation the default
-> conda on your computer when you follow step 6 of the Mambaforge installation.
+{{< noticeowl "tip" >}}
+
+**Windows Users:** if you already have Anaconda installed, then you will be
+asked to confirm that you want to make the Mambaforge installation the default
+conda on your computer when you follow step 6 of the Mambaforge installation.
+
+{{< /noticeowl >}}
+
 
 Download the <a href="https://github.com/conda-forge/miniforge#mambaforge" target="_blank">Mambaforge installer for Windows</a>.
 
 Run the installer by double-clicking on the downloaded file and follow the steps
 below.
 
-1.  Click "Run".
-2.  Click on "Next".
-3.  Click on "I agree".
-4.  Leave the selection on "Just me" and click on "Next".
-5.  Click on "Next".
-6.  **Select the first option for "Add Anaconda to my PATH environment variable"** and also **leave the selection on "Register Anaconda as my default Python 3.x".** Click on "Install".
-    -   Note that even though the installation is for Mambaforge, the installer uses the word Anaconda in these options.
-    -   You will also see a message in red text that selecting "Add Anaconda to my PATH environment variable" is not recommended; continue with this selection to make using conda easier in Git Bash. If you have questions or concerns, please contact your instructor.
-7.  When the install is complete, Click on "Next".
-8.  Click on "Finish".
+1. Click “Run”.
+2. Click on "Next".
+3. Click on “I agree”.
+4. Leave the selection on “Just me” and click on “Next”.
+5. Click on "Next".
+6. **Select the first option for “Add Anaconda to my PATH environment variable”** and also **leave the selection on “Register Anaconda as my default Python 3.x”.** Click on “Install”.
+    * Note that even though the installation is for Mambaforge, the installer uses the word Anaconda in these options.
+    * You will also see a message in red text that selecting “Add Anaconda to my PATH environment variable” is not recommended; continue with this selection to make using conda easier in Git Bash. If you have questions or concerns, please contact your instructor.
+7. When the install is complete, Click on “Next”.
+8. Click on “Finish”.
 
 Once you are done, you can test that the installation worked.
 
 ### Test your install on Windows
 
-1.  Search for and open the `Git Bash` program. In this `Terminal` window, type `bash` and hit enter.
-    If you do not get a message back, then `Bash` is available for use.
+1. Search for and open the `Git Bash` program. In this `Terminal` window, type `bash` and hit enter.
+If you do not get a message back, then `Bash` is available for use.
 
-2.  Next, type `git` and hit enter.
-    If you see a list of commands that you can execute, then `Git` has been installed correctly.
+2. Next, type `git` and hit enter.
+If you see a list of commands that you can execute, then `Git` has been installed correctly.
 
-3.  Next, type `conda` and hit enter.
-    Again, if you see a list of commands that you can execute, then Mambaforge `Python` has been installed correctly.
+3. Next, type `conda` and hit enter.
+Again, if you see a list of commands that you can execute, then Mambaforge `Python` has been installed correctly.
 
-4.  Close the `Terminal` by typing `exit`.
+4. Close the `Terminal` by typing `exit`.
 
-<!-- Note that there are five types of callouts, including:
-`note`, `warning`, `important`, `tip`, and `caution`. -->
+{{< /tab >}}
+{{< /tabs >}}

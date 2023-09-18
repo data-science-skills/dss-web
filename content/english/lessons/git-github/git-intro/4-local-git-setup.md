@@ -13,20 +13,18 @@ order: 5
 ---
 
 {{< toc >}}
+{{< noticeowl "learn" >}}
 
-> **<i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives**
->
-> After completing this page, you will be able to:
->
-> -   **configure** git locally with your username and email and preferred text editor
-> -   Setup git / GitHub authentication using either a token or SSH
+After completing this page, you will be able to:
+
+* **configure** git locally with your username and email and preferred text editor
+* Setup git / GitHub authentication using either a token or SSH
+
+{{< /noticeowl >}}
 
 ## Git and GitHub Workflow For Version Control
 
 Previously, you learned how to `fork` **GitHub** repositories to make copies of other users' repositories, and you also learned how to download copies of (i.e. `clone`) **GitHub** repositories to your computer. On this page, you will learn to setup **git** on your computer:
-
-<!-- #endregion -->
-<!-- #region hidePrompt=true -->
 
 ## Configure git Username and Email On Your Computer
 
@@ -56,24 +54,21 @@ These configuration settings ensure that changes you make to repositories are at
 
 There are many text editors available for use with Git. Some such as Nano, Sublime and Vim are fully command line based. These are useful when you are working on remote servers and Linux and are often the default text editors for most computers. You may want to switch your git default text editor to a gui based editor to make things easier when you are getting started.
 
-<i class="fa fa-star" aria-hidden="true"></i> **Data Tip** <a href="https://docs.github.com/en/github/using-git/associating-text-editors-with-git" target="_blank">More on setting a default text editor from GitHub.</a> If the text editors below don't work for you, you can <a href="https://help.github.jp/enterprise/2.11/user/articles/associating-text-editors-with-git/" target="_blank">visit this page to learn more about other options such as Notepad++ for windows. </a>
-{: .notice--success }
+{{< noticeowl "tip" >}}
 
-### Installing Atom as a Default Text Editor
+<a href="https://docs.github.com/en/github/using-git/associating-text-editors-with-git" target="_blank">More on setting a default text editor from GitHub.</a> If the text editors below don't work for you, you can <a href="https://help.github.jp/enterprise/2.11/user/articles/associating-text-editors-with-git/" target="_blank">visit this page to learn more about other options such as Notepad++ for windows. </a>
 
-If you aren't sure what text editor you want to use, and you are on a MAC or PC <a href="https://atom.io/" target="_blank">we suggest Atom which is a powerful and free text editor that also has git and github support!</a> If you are on a MAC, before using Atom at the command line, you will need to install the shell command line tools. To get these tools installed
+{{< /noticeowl >}}
 
-1.  open up Atom
-2.  Go to the Atom drop down at the very top of your screen.
-3.  Select "Install Shell Commands"
+### Using VScode as your Default Text Editor
 
-The steps above will allow you to run `atom file-name-here` in bash to open the Atom text editor. Once you have Atom installed, you can run the command below in bash to set **Atom** to be the default text editor:
+If you already use vscode, you can set it up as your default text editor to use with Git. This is particularly useful if you use the vscode terminal interface to work with git as well.
 
 ``` bash
-git config --global core.editor "atom --wait"
+git config --global core.editor "code --wait"
 ```
 
-This command will set atom to be your default text editor for all operations.
+This command will set VSCODE to be your default text editor for all operations.
 
 ### Setting Nano as a Default Text Editor For JupyterHub Environments
 
@@ -105,8 +100,11 @@ run, token-based authentication can be more difficult to manage given:
 
 <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token" target="_blank">To setup a token to use for authentication, follow the GitHub guide.</a>
 
-<i class="fa fa-star"></i> **Data Tip:** If you chose to setup token based authentication, once you generate your token, be sure to copy it to a safe location before you close the GitHub page. If you lose the token, you will have to recreate it.
-{: .notice--success }
+{{< noticeowl "tip" >}}
+
+If you chose to setup token based authentication, once you generate your token, be sure to copy it to a safe location before you close the GitHub page. If you lose the token, you will have to recreate it. 
+
+{{< /noticeowl >}}
 
 ### Set Up an SSH Connection to GitHub (recommended)
 
@@ -138,24 +136,24 @@ If you have been using a username / password login to authenticate with GitHub, 
 to SSH-based authentication, you will likely need to update the remotes attached to your GitHub repo(s).
 A quick way to see if this is the case, is
 
-1.  at the command line, CD to the repo directory (cd path/to/practice-git-skillz)
+1.  at the command line, CD to the repo directory (cd path/to/practice-git)
 2.  when in the directory of interest, run `git remote -v`
 
 If the URL returned looks like the one below, starting with **https://** then you are still authenticating
 using either a password or a token. If you setup token-based authentication, then you can use the https:// remote setup.
 
 ``` bash
-$ (base) practice-git-skillz $ git remote -v
-origin  https://github.com/your-username/practice-git-skillz.git (fetch)
-origin  https://github.com/your-username/practice-git-skillz.git (push)
+$ (base) practice-git $ git remote -v
+origin  https://github.com/your-username/practice-git.git (fetch)
+origin  https://github.com/your-username/practice-git.git (push)
 ```
 
 However, if you wish to use SSH, then you will need to UPDATE the remote for your repo.
 
 ``` bash
-$ (base) practice-git-skillz $ git remote -v
-origin  git@github.com:your-username/practice-git-skillz.git (fetch)
-origin  git@github.com:your-username/practice-git-skillz.git (push)
+$ (base) practice-git $ git remote -v
+origin  git@github.com:your-username/practice-git.git (fetch)
+origin  git@github.com:your-username/practice-git.git (push)
 ```
 
 To change your remote repository url from https to SSH, do the following
@@ -173,9 +171,7 @@ You can find the url for your GitHub repo using the green code button. Copy the 
 </figure>
 
 ``` bash
-$ git remote set-url origin git@github.com:your-username/practice-git-skillz.git
+$ git remote set-url origin git@github.com:your-username/practice-git.git
 ```
 
 Once you have updated your remotes, SSH authentication should work!
-
-<!-- #endregion -->

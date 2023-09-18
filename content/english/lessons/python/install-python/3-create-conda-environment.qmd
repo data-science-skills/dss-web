@@ -4,7 +4,9 @@ subtitle: "Create reproducible conda environments using an environment.yml file.
 description: |
   "Learn how to create a reproducible conda environment using environment.yml files. Best practices for scientists who want to create a Python environment containing different tools for different workflows."
 partner: "dss"
-author: "Leah Wasser"
+authors: 
+  - "Leah Wasser"
+  - "Jenny Palomino"
 date: 2023-02-12
 nav_title: "Create conda environment"
 categories:
@@ -15,8 +17,6 @@ image: "/images/python/create-conda-environment.png"
 module: "install-python"
 order: 3
 ---
-
-Jenny 
 
 ```{=markdown}
 {{< toc >}}

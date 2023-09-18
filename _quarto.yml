@@ -3,4 +3,4 @@ project:
       
 format: 
   hugo-md:
-    code-fold: true
+    code-fold: false

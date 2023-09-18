@@ -3,7 +3,9 @@ title: "Why Conda is Better for Scientific Environments"
 subtitle: "Learn why conda can make installing creating environments easier for scientists."
 description: |
   A conda environment is a self contained Python environment that allows you to run different versions of Python (with different installed packages) on your computer. Learn how to conda environments can you help manage Python packages and dependencies.
-author:  "Will Norris"
+authors:  
+  - "Will Norris"
+  - "Leah Wasser"
 date: 2023-02-12
 partner: "dss"
 categories:
@@ -12,33 +14,20 @@ categories:
   - Environment
   - Conda
 nav_title: "Why conda for science?"
-toc: true
 image: "/images/python/why-use-conda.png"
 module: "install-python"
 order: 2
 ---
 
--   <a href="#learning-objectives" id="toc-learning-objectives"><i class="fa-solid fa-graduation-cap"></i> Learning Objectives</a>
--   <a href="#conda-environments-in-python" id="toc-conda-environments-in-python">Conda Environments in Python</a>
-    -   <a href="#the-third-party-library-issue" id="toc-the-third-party-library-issue">The Third Party Library Issue</a>
-    -   <a href="#python-environments" id="toc-python-environments">Python Environments</a>
--   <a href="#what-is-conda" id="toc-what-is-conda">What is Conda</a>
--   <a href="#why-conda" id="toc-why-conda">Why Conda</a>
-    -   <a href="#conda-is-cross-platform" id="toc-conda-is-cross-platform">1. Conda is Cross Platform</a>
-    -   <a href="#conda-can-install-specific-versions-of-python" id="toc-conda-can-install-specific-versions-of-python">2. Conda Can Install Specific Versions of <strong>Python</strong></a>
-    -   <a href="#environments-are-native-to-conda" id="toc-environments-are-native-to-conda">3. Environments are Native to Conda</a>
-    -   <a href="#conda-is-better-at-dependency-management" id="toc-conda-is-better-at-dependency-management">4. Conda is Better at Dependency Management</a>
-    -   <a href="#conda-manages-external-dependencies" id="toc-conda-manages-external-dependencies">5. Conda Manages External Dependencies</a>
--   <a href="#channels-in-conda" id="toc-channels-in-conda">Channels in Conda</a>
-    -   <a href="#default-channels" id="toc-default-channels">Default Channels</a>
-    -   <a href="#conda-forge" id="toc-conda-forge">Conda-Forge</a>
+{{< toc >}}
+{{< noticeowl "learn" >}}
 
-Add leah
+After completing this page, you will be able to:
 
-## <i class="fa-solid fa-graduation-cap"></i> Learning Objectives
+* Understand how dependency management can play a large role in **Python** programming.
+* Explain how to use **conda** environments to manage your third party libraries.
 
--   Understand how dependency management can play a large role in **Python** programming.
--   Explain how to use **conda** environments to manage your third party libraries.
+{{< /noticeowl >}}
 
 ## Conda Environments in Python
 
@@ -52,10 +41,7 @@ While having a plethora of open source functionality available to the community 
 
 In **Python**, regardless of what project you are working on, your computer will store third party libraries in the same location. This means that if you depend on GDAL 2.4.2 in an older project and GDAL 3.0.1 in your brand new project, you will need a way to store these dependencies separately. If they aren't stored separately, **Python** will not be able to tell the difference between the two that are both installed in the same location.
 
-<figure>
-<img src="../images/python/xkcd-python-environment-mess.png" title="Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues. Image from XKCD Webcomic. Licensed here: https://xkcd.com/license.html." data-fig-alt="Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues" alt="Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues. Image from XKCD Webcomic. Licensed here: https://xkcd.com/license.html." />
-<figcaption aria-hidden="true">Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues. Image from XKCD Webcomic. Licensed here: https://xkcd.com/license.html.</figcaption>
-</figure>
+{{< image src="images/python/xkcd-python-environment-superfund.jpg" caption="Dependency conflicts can cause significant issues when working with Python. Conda allows you to install multiple environments on your computer and to address dependency issues. Image from XKCD Webcomic. Source: XKCD" alt="An image showing a spaghtee monster like web of things installed on a computer including various versions of python installed different ways. At the bottom it says my laptop has become a superfund site." width="600" position="center" command="fit" option="q100" class="img-fluid" title="image title" >}}
 
 ### Python Environments
 
@@ -127,9 +113,11 @@ While they both install packages, **conda** is very different than **pip**. **Co
 For a simple workflow, the benefits of **conda** may not be worth the extra effort to get up and running. For working with geospatial libraries, **conda** is definitely preferred, given it's ability to resolve
 dependency issues associated with **GDAL**.
 
-> **Data Tip**
->
-> Sometimes **Python** libraries are on `Github.com`. You can install **Python** libraries from `Github.com` using `pip install git+git://github.com/path-to-github-user/repo-name.git`
+{{< noticeowl "tip" >}}
+
+Sometimes **Python** libraries are on Github and not on a repository like PyPI. In this case, or in the case that you want to install a specific development version of a package, you can install **Python** libraries from Github using `pip install git+git://github.com/path-to-github-user/repo-name.git`
+
+{{< /noticeowl >}}
 
 ## Channels in Conda
 
@@ -151,10 +139,7 @@ when you install packages in a conda environment. However in some cases, a
 package may not be on conda. In these instances you may be forced to use
 pip.
 
-<figure>
 <img src="../images/python/conda-channels-geohackweek.jpeg" title="You can think about a channel as a bucket of tools that are all located on the same server / in the same main directory. The three main Python channels are conda default (managed by Anaconda), conda-forge and bioconda. Image Source: https://geohackweek.github.io/datasharing/01-conda-tutorial/." data-fig-alt="Hand drawn image showing the various buckets or channels available in the anaconda cloud." alt="You can think about a channel as a bucket of tools that are all located on the same server / in the same main directory. The three main Python channels are conda default (managed by Anaconda), conda-forge and bioconda. Image Source: https://geohackweek.github.io/datasharing/01-conda-tutorial/." />
-<figcaption aria-hidden="true">You can think about a channel as a bucket of tools that are all located on the same server / in the same main directory. The three main Python channels are conda default (managed by Anaconda), conda-forge and bioconda. Image Source: https://geohackweek.github.io/datasharing/01-conda-tutorial/.</figcaption>
-</figure>
 
 ### Default Channels
 

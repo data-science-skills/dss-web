@@ -16,14 +16,15 @@ order: 5
 ---
 
 {{< toc >}}
+{{< noticeowl "learn" >}}
 
-> **<i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives**
->
-> After completing this page, you will be able to:
->
-> -   Use **git** to `add` and `commit` changed files to version control.
-> -   Use **git** to `push` changed files from your local computer to the repository on **Github.com**.
-> -   Use **git** to `pull` changed file from your repo to your local computer.
+After completing this page, you will be able to:
+
+* Use **git** to `add` and `commit` changed files to version control. 
+* Use **git** to `push` changed files from your local computer to the repository on **Github.com**.
+* Use **git** to `pull` changed file from your repo to your local computer.
+
+{{< /noticeowl >}}
 
 ## Git and GitHub Workflow For Version Control
 
@@ -39,7 +40,7 @@ You will also setup your git credentials locally.
 
 Once you start working, you can use the `git status` command to check what changes are being identified by **git**. To practice working with this command, use the **terminal** to navigate to your git practice repository:
 
-`$ cd practice-git-skillz`
+`$ cd practice-git`
 
 Next, run `git status`.
 
@@ -110,11 +111,10 @@ You can also add all of the files that you have edited at the same time using:
 
 `git add .`
 
-> **Note**
->
-> <i class="fa fa-star" aria-hidden="true"></i> **Data Tip**
->
-> **Use `git add .` with caution**. Be sure to review the results from `git status` carefully before using `git add .`. You do not want to accidentally add files to version control that you do not want to change in your **GitHub** repository!
+{{< noticeowl "tip" >}}
+
+**Use `git add .` with caution**. Be sure to review the results from `git status` carefully before using `git add .`. You do not want to accidentally add files to version control that you do not want to change in your **GitHub** repository! 
+{{< /noticeowl >}}
 
 ## Commit Changed Files Using git commit
 
@@ -181,7 +181,7 @@ To update your repo with changes that are on GitHub.com you can do the following
 In the example below, there are no changes to any files. `git pull` returns `Already  up to date`.
 
 ``` bash
-$ cd practice-git-skillz/
+$ cd practice-git/
 $ git pull
 Already up to date. 
 ```
@@ -191,14 +191,14 @@ down. Notice that it gives you a summary of what files were changed (in the exam
 below this is the **README.md** file) and how many changes were made.
 
 ``` bash
-$ cd practice-git-skillz/
+$ cd practice-git/
 $ git pull
 remote: Enumerating objects: 5, done.
 remote: Counting objects: 100% (5/5), done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-From github.com:data-science-skills/practice-git-skillz
+From github.com:data-science-skills/practice-git
    7d45e2c..675d82e  main     -> origin/main
 Updating 7d45e2c..675d82e
 Fast-forward
@@ -207,7 +207,6 @@ Fast-forward
 ```
 
 All of the changes that were made to your repo, will be pulled down to your local repo.
-<!-- #endregion -->
 
 <!-- #region -->
 
@@ -231,17 +230,20 @@ Date:   Mon Aug 5 15:30:54 2019 -0600
 
 Notice that `git log` provides a lot of useful information about the commit, including the unique identifier assigned to that snapshot, the message description provided during the commit (i.e. the message after `-m`) as well as the date, time, and author of the commit.
 
-> **Note**
->
-> <i class="fa fa-star" aria-hidden="true"></i> **Data Tip** `git log` by default returns a lot of information. You can view the log as single line entries with just the commit message using `git log --pretty=oneline`. `git log -- pretty=oneline | head -n 10` will show you the most recent 10 entries. IMPORTANT: when the log results appear in bash, you can use the space bar to scroll through the results. If you want to return to the command prompt, hit the `q` key (q for quit). Try it out!
+{{< noticeowl "tip" >}}
+
+`git log` by default returns a lot of information. You can view the log as single line entries with just the commit message using `git log --pretty=oneline`. `git log --
+pretty=oneline | head -n 10` will show you the most recent 10 entries. IMPORTANT: when the log results appear in bash, you can use the space bar to scroll through the results. If you want to return to the command prompt, hit the `q` key (q for quit). Try it out! 
+
+{{< /noticeowl >}}
 
 ## Tell Git to Ignore Files Using a .gitignore file
 
 Sometimes there are files in your git repo that you do not want to be tracked. If you are on a MAC
-these may be hidden files such as
+these may be hidden **files** such as
 
--   \*\*\_DS_STORE\*\* or
--   .ipynb checkpoint files.
+-   `_DS_STORE` files (MAC) or
+-   `.ipynb` checkpoint files.
 
 Other times you have sensitive files in a repository that you never want to track with **git** such as API credentials or other files containing personal information.
 You can add any file types or names to a `.gitignore` file. **git** will then not track them. This means that when you run `git add` or `git status`, it will not track any files listed in the `.gitignore` file. These files will thus never be added to **GitHub.com**.
@@ -257,39 +259,40 @@ using the following `bash` command:
 touch .gitignore
 ```
 
-> **Note**
->
-> <i class="fa fa-star" aria-hidden="true"></i> **Data Tip** Above, the bash command `touch` is used to create a new .gitignore file (this is only useful if the file does not already exist.
+{{< noticeowl "tip" >}}
+
+Above, the bash command `touch` is used to create a new .gitignore file (this is only useful if the file does not already exist.
+{{< /noticeowl >}}
 
 Open this `.gitignore` file in a text editor and add the file names (with no other information needed) that you want **git** to ignore, for example:
 
-    social-security.txt
+`social-security.txt`
 
 Any files listed in the `.gitignore` file will be ignored by **git**. You can also tell **git** to ignore directories by adding the directory name to the `gitignore` file (e.g. ignore a directory called `private-directory`):
 
     private-directory/
 
-> **Note**
->
-> <i class="fa fa-star"></i> **Data tip:** Learn more about using .gitignore files to ignore files and directories in your **git** repository on the <a href="http://swcarpentry.github.io/git-novice/06-ignore/
-> " target="_blank">Software Carpentry Git Lessons</a>.
+{{< noticeowl "note" >}}
 
-<!-- #endregion -->
-
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Create a New Text File In Your Repo
+Learn more about using .gitignore files to ignore files and directories in your **git** repository on the <a href="http://swcarpentry.github.io/git-novice/06-ignore/
+" target="_blank">Software Carpentry Git Lessons</a>.
+{{< /noticeowl >}}
+{{< noticeowl "exercise" >}}
+Challenge - Create a New Text File In Your Repo
 
 It's time to practice your git skills! Do the following:
 
-1.  If you haven't already, fork the `https://github.com/data-science-skills/practice-git-skillz` repo.
-2.  Next, clone your fork of that repo using `git clone`
-3.  Open up the `README.md` file and make some changes to the text
-4.  Use `git add` and `git commit` to add and commit those changes
-5.  Finally push the changes up to github.com using `git push`
+1. If you haven't already, fork the `https://github.com/data-science-skills/practice-git` repo. 
+2. Next, clone your fork of that repo using `git clone`
+3. Open up the `README.md` file and make some changes to the text
+4. Use `git add` and `git commit` to add and commit those changes
+5. Finally push the changes up to github.com using `git push`
 
 Now, go to the url where the repo is on Github.com - the path to the repo likely looks something like the path below:
 
-(replace `your-github-username` with your real github username!)
+(replace `your-github-username`  with your real github username!)
 
-https://github.com/your-github-username/practice-git-skillz
+https://github.com/your-github-username/practice-git
 
 Do you see your changes to the `README.md` file?
+{{< /noticeowl >}}

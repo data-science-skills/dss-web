@@ -48,11 +48,11 @@ font_scale = "1.25" # default is "majorThird": 1.25
 # Paste it here.
 # example: "Work+Sans:wght@400;500;600"
 # Headings
-font_primary = "Nunito:wght@400;700"
-font_primary_type = "sans-serif"        # [serif/sans-serif]
+font_primary = "Nunito:wght@400;500;600;700;800"
+font_primary_type = "sans-serif"                 # [serif/sans-serif]
 font_secondary = "PT+Sans:wght@400;500"
-font_secondary_type = "sans-serif"      # [serif/sans-serif]
-font_icon = "Font Awesome 6 Free"       # https://fontawesome.com/v5.15/icons/
+font_secondary_type = "sans-serif"               # [serif/sans-serif]
+font_icon = "Font Awesome 6 Free"                # https://fontawesome.com/v5.15/icons/
 
 
 ############################# Plugins ##############################

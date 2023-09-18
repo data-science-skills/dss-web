@@ -15,14 +15,15 @@ order: 3
 ---
 
 {{< toc >}}
+{{< noticeowl "learn" >}}
 
-> **<i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning Objectives**
->
-> After completing this page, you will be able to:
->
-> -   Explain how a **GitHub** repository stores and tracks changes to files.
-> -   Create a copy of (i.e. `fork`) other users' files on **GitHub.com** .
-> -   Use the `git clone` command to download a copy of a **GitHub** repository to your computer.
+After completing this page, you will be able to:
+
+- Explain how a **GitHub** repository stores and tracks changes to files.
+- Create a copy of (i.e. `fork`) other users' files on **GitHub.com** .
+- Use the `git clone` command to download a copy of a **GitHub** repository to your computer.
+
+{{{{{< /noticeowl >}}}}}
 
 ## About Git and GitHub
 
@@ -30,7 +31,9 @@ Previously, you learned that **git** is tool that is used to track changes in fi
 
 You can use **git** and **GitHub** together in a workflow to make changes to files locally with **git** and to store and share your files on **GitHub.com**. To work together, **git** and **GitHub** use repositories (i.e. directories of files) to manage and store files.
 
-<i class="fa fa-star"></i> **Data Tip:** A **GitHub** repository is a directory of files and folders that is hosted on **GitHub.com**.
+{{< noticeowl "tip" >}}
+A **GitHub** repository is a directory of files and folders that is hosted on **GitHub.com**.  
+{{< /noticeowl >}}
 
 Having a copy of a set of files stored in **GitHub** repositories in the cloud is ideal because:
 
@@ -95,13 +98,7 @@ To fork a repo:
 
 `https://github.com/your-user-name/practice-git`
 
-<figure>
-<a href="images/git-github/github-fork-repo.gif">
-<img src="images/git-github/github-fork-repo.gif" alt="You can create a copy of repositories created by other users on Github by forking their repository to your Github account."></a>
-<figcaption>
-To fork a repo, first navigate to the repo you want to fork. Then click the **fork** button in the upper right hand corner of your screen. You can then create a copy of of this repo in your account.
-</figcaption>
-</figure>
+{{< image src="images/git-github/github-fork-repo.gif" link="images/git-github/github-fork-repo.gif" caption="You can make a local copy of your forked repository on your computer with the git clone command. In this demo we uncheck the copy main only option. You can decide if you wish to copy over all of the branches or just the main branch depending upon what you need to do with the fork." alt="To fork a repo, first navigate to the repo you want to fork. Then click the fork button in the upper right hand corner of your screen. You can then create a copy of of this repo in your account." width="800" position="center" command="fit" option="q100" class="img-fluid" title="image title" >}}
 
 In another module on GitHub for collaboration, you will learn how to suggest changes to the original repository, receive updates from the original repository to your fork, and collaborate with others.
 
@@ -134,11 +131,12 @@ On the main **GitHub.com** page of the repository, you can click on the green bu
 
 `https://github.com/your-username/practice-git`
 
-{{< image src="images/git-github/github-clone-repo.gif" link="images/git-github/github-clone-repo.gif" caption="You can make a local copy of your forked repository on your computer with the git clone command." alt="alter-text" width="500" position="center" command="fit" option="q100" class="img-fluid" title="image title" >}}
+{{< image src="images/git-github/github-clone-repo.gif" link="images/git-github/github-clone-repo.gif" caption="You can make a local copy of your forked repository on your computer with the git clone command. Note that in this example, there is an additional authentication step at the command line using a security key (a yubikey). It’s ok if you do not have that setup for the time being. We will discuss security and authentication in a future git lesson." alt="an animated gif showing the process of copying a url from the github interface. then it goes into bash / shell and runs git clone with the url pasted after the word clone. The url is the path to the forked repository." width="800" position="center" command="fit" option="q100" class="img-fluid" title="image title" >}}
+{{< noticeowl "tip" >}}
 
-<div class="notice" markdown="1">
-<i class="fa fa-star"></i> You can also copy the URL directly from your web browser, or in some cases, you might already know the URL. However, in many cases, you will come across a new GitHub.com repository on your own and will need to follow these instructions to copy the URL for future use.
-</div>
+You can also copy the URL directly from your web browser, or in some cases, you might already know the URL. However, in many cases, you will come across a new GitHub.com repository on your own and will need to follow these instructions to copy the URL for future use.
+
+{{< /noticeowl >}}
 
 ### Run the Git Clone Command in the Terminal
 
@@ -155,19 +153,21 @@ $ ls
     practice-git
 ```
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge - Fork and Clone a Repository
+{{< noticeowl "exercise" >}}
+
+Challenge - Fork and Clone a Repository
 
 Go to GitHub.com and login. Then use the link below to open the **practice-git** repo.
 
 `https://github.com/data-science-skills/practice-git`
 
--   On the main **GitHub.com** page of this repository, you will see a button on the top right that says `Fork`. The number next to `Fork` tells the number of times that the repository has been copied or forked.
--   Click on the `Fork` button and select your **GitHub.com** account as the home of the forked repository.
--   Once you have forked a repository, you will have a copy (or a fork) of that repository in your **GitHub** account. The URL to your fork will contain your username:
+- On the main **GitHub.com** page of this repository, you will see a button on the top right that says `Fork`. The number next to `Fork` tells the number of times that the repository has been copied or forked.
+- Click on the `Fork` button and select your **GitHub.com** account as the home of the forked repository.
+- Once you have forked a repository, you will have a copy (or a fork) of that repository in your **GitHub** account. The URL to your fork will contain your username:
 
 `https://github.com/your-username/practice-git`
 
--   Finally, clone the fork that you created above so you have a copy of all the files on github.com on your local computer.
+- Finally, clone the fork that you created above so you have a copy of all the files on github.com on your local computer.
 
 To make sure you did things right, in bash, cd to the practice-git directory on your computer.
 Type:
@@ -177,3 +177,5 @@ Type:
 The paths returned should look something like this:
 
 `https://github.com/your-username/practice-git`
+
+{{< /noticeowl >}}
