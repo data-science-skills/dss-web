@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://datascienceskills.org/index.html</loc>
-    <lastmod>2023-09-18T15:07:32.491Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datascienceskills.org/use-git-github/setup-git-bash.html</loc>
-    <lastmod>2023-09-18T15:07:33.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datascienceskills.org/install-python/create-conda-environment.html</loc>
-    <lastmod>2023-09-18T15:07:34.252Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datascienceskills.org/install-python/python-environment-tips.html</loc>
-    <lastmod>2023-09-18T15:07:40.252Z</lastmod>
+    <lastmod>2024-02-23T22:41:17.708Z</lastmod>
   </url>
   <url>
     <loc>https://datascienceskills.org/install-python/why-use-conda-for-science.html</loc>
-    <lastmod>2023-09-18T15:07:41.000Z</lastmod>
-  </url>
-  <url>
-    <loc>https://datascienceskills.org/install-python/python-packages.html</loc>
-    <lastmod>2023-09-18T15:07:41.560Z</lastmod>
+    <lastmod>2024-02-23T22:41:18.508Z</lastmod>
   </url>
   <url>
     <loc>https://datascienceskills.org/install-python/get-started-python.html</loc>
-    <lastmod>2023-09-18T15:07:42.116Z</lastmod>
+    <lastmod>2024-02-23T22:41:18.876Z</lastmod>
   </url>
   <url>
     <loc>https://datascienceskills.org/install-python/install-python-conda.html</loc>
-    <lastmod>2023-09-18T15:07:46.268Z</lastmod>
+    <lastmod>2024-02-23T22:41:24.216Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datascienceskills.org/install-python/python-environment-tips.html</loc>
+    <lastmod>2024-02-23T22:41:26.744Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datascienceskills.org/install-python/create-conda-environment.html</loc>
+    <lastmod>2024-02-23T22:41:27.280Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datascienceskills.org/install-python/python-packages.html</loc>
+    <lastmod>2024-02-23T22:41:27.656Z</lastmod>
+  </url>
+  <url>
+    <loc>https://datascienceskills.org/use-git-github/setup-git-bash.html</loc>
+    <lastmod>2024-02-23T22:41:28.008Z</lastmod>
   </url>
 </urlset>
