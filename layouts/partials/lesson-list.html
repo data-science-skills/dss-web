@@ -1,0 +1,28 @@
+<ul class="lesson-navigation">
+  {{ $currentModule := .Params.module }}
+  {{ $lessonDirs := where .Site.Pages "Section" "lessons" }}
+  {{ range $lessonDirs }}
+      {{ with .File }}
+          {{ with index .Params "module" }}
+              {{ if and (eq . $currentModule) (eq .Type "markdown") }}
+                  <li>
+                      <a href="{{ .RelPermalink }}">{{ .Name }}</a>
+                  </li>
+              {{ end }}
+          {{ end }}
+      {{ end }}
+  {{ end }}
+</ul>
+
+
+
+<ul class="lesson-navigation">
+    {{ $lessonDirs := readDir "content/english/lessons" }}
+    {{ range $lessonDirs }}
+      {{ $lessonName := .Name }}
+      WHAT IS THIS?
+      <li>
+        <a href="{{ printf "/lessons/%s/" $lessonName }}">{{ $lessonName }}</a>
+      </li>
+    {{ end }}
+  </ul>

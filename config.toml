@@ -1,0 +1,3 @@
+
+# For quarto support don't publish these formats
+ignoreFiles = ["\\.qmd$", "\\.ipynb$", "\\.py$"]

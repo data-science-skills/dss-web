@@ -3,9 +3,9 @@
 # Pyre type checker
 .pyre/
 
+ delete-datascience-skills/*
 /.luarc.json
-
-
+_drafts/*
 dsk/.gitignore
 dsk/_extensions/
 dsk/_site/
@@ -14,3 +14,24 @@ dsk/index.css
 dsk/styles.css
 dsk/use-git-github/_metadata.yml
 dsk/use-git-github/fork-github-repo.qmd
+
+/.quarto/
+
+.hugo_build.lock
+public/*
+old-README.md
+old/*
+resources/*
+themes/bigspring-hugo/.editorconfig
+themes/bigspring-hugo/.github/
+themes/bigspring-hugo/.gitignore
+themes/bigspring-hugo/.gitlab-ci.yml
+themes/bigspring-hugo/.jshintrc
+themes/bigspring-hugo/.prettierrc
+themes/bigspring-hugo/.vscode/
+node_modules/*
+resources/*
+hugo_stats.json
+netlify.toml
+node_modules/*
+*.ipynb

@@ -1,0 +1,15 @@
+- key: "dss"
+  name: "Data Science Skills"
+  banner: /images/partners/data-science-skills-banner.png
+  avatar_alt: "Alt for image here"
+  description: "This is a description."
+  tagline: "We create high quality open lessons for open science."
+  linkedin:
+  color: "#ccc"
+  fontColor: "#fff"
+- key: pyopensci
+  name: "pyOpenSci"
+  avatar: "/images/authors/data-science-skills.png"
+  tagline: "We build diverse community around the open source tools that drive open science"
+  website: "https://www.pyopensci.org"
+  linkedin:

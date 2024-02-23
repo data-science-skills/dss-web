@@ -14,23 +14,62 @@ jobs:
         shell: bash -l {0}
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install deps & modules
+        run: |
+          npm install
+          hugo mod get -u
+
       - name: Check versions
         run: |
+          hugo version
+          go version
           quarto --version
+
+      - name: Check python
+        run: |
           which python
           mamba list
-
-      - name: Render website
+      - name: View dir structure
         run: |
-          quarto render dsk/
           ls
 
-      # Push the book's HTML to github-pages
+      - name: Build quarto/hugo website
+        continue-on-error: false
+        run: |
+          # Render quarto qmd files --> md
+          quarto render
+          npm run build
+
+      - name: View site files
+        run: |
+          ls public
+
+      - name: Archive the directory
+        run: |
+          # Install the zip utility
+          apt-get update -y
+          apt-get install -y zip
+          # Create archive
+          zip -r website.zip public
+
+      - name: Upload the zip file as an artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: website
+          path: website.zip
+
+      # Push HTML to github-pages
       - name: Push to GitHub Pages
         # Only push if on main branch
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dsk/_site
+          publish_dir: ./public

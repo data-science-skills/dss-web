@@ -37,5 +37,7 @@ repos:
     rev: v2.2.2
     hooks:
     - id: codespell
+      args: [-I, .codespellignore]
       additional_dependencies:
         - tomli
+exclude: '(_vendor|i18n|themes/bigspring-hugo/assets/plugins)/.*|package-lock.json'

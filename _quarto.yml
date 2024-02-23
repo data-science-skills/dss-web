@@ -1,0 +1,6 @@
+project:
+  type: hugo
+
+format:
+  hugo-md:
+    code-fold: false
