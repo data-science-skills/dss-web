@@ -26,8 +26,7 @@ Learn about the benefits of version control for tracking and managing changes
 to your files. You will also learn how to implement version control using
 **git** and then upload changes to **Github.com**.
 
-```{=markdown}
-{{< noticeowl "learn" >}}
+{{{< noticeowl "learn" >}}}
 
 After completing this module, you will be able to:
 
@@ -42,7 +41,6 @@ Be sure that you have completed the instructions on [Setting up Git, Bash, and C
 You will also need a web browser and your **GitHub.com** login (username and password).
 
 {{{< /noticeowl >}}}
-```
 
 ## What is Version Control?
 
