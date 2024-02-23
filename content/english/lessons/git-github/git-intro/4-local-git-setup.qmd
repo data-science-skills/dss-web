@@ -37,15 +37,15 @@ Previously, you learned how to `fork` **GitHub** repositories to make copies of 
 
 The first time that you use **git** on a computer, you will need to configure your **GitHub.com** username and email address. This information will be used to document who made changes to files in **git**. It is important to use the same email address and username that you setup on **GitHub.com**.
 
-You can set your **Github.com** username in the **terminal** by typing: 
- 
+You can set your **Github.com** username in the **terminal** by typing:
+
 `$ git config --global user.name "username"`.
 
-Next, you can set the email for your **Github.com** account by typing: 
+Next, you can set the email for your **Github.com** account by typing:
 
 `$ git config --global user.email "email@email.com"`.
 
-Using the `--global` configuration option, you are telling **git** to use these settings for all **git** repositories that you work with on your computer. Note that you only have to configure these settings one time on your computer.  
+Using the `--global` configuration option, you are telling **git** to use these settings for all **git** repositories that you work with on your computer. Note that you only have to configure these settings one time on your computer.
 
 *****
 
@@ -55,11 +55,11 @@ You can check your config settings for `user.name` and `user.email` using the fo
 
 `git config user.email` which returns the email that you set previously
 
-These configuration settings ensure that changes you make to repositories are attributed to your username and email. 
+These configuration settings ensure that changes you make to repositories are attributed to your username and email.
 
 ## Setup Your Preferred Text Editor
 
-There are many text editors available for use with Git. Some such as Nano, Sublime and Vim are fully command line based. These are useful when you are working on remote servers and Linux and are often the default text editors for most computers. You may want to switch your git default text editor to a gui based editor to make things easier when you are getting started. 
+There are many text editors available for use with Git. Some such as Nano, Sublime and Vim are fully command line based. These are useful when you are working on remote servers and Linux and are often the default text editors for most computers. You may want to switch your git default text editor to a gui based editor to make things easier when you are getting started.
 
 
 ```{=markdown}
@@ -70,7 +70,7 @@ There are many text editors available for use with Git. Some such as Nano, Subli
 {{{< /noticeowl >}}}
 ```
 
-### Using VScode as your Default Text Editor 
+### Using VScode as your Default Text Editor
 
 If you already use vscode, you can set it up as your default text editor to use with Git. This is particularly useful if you use the vscode terminal interface to work with git as well.
 
@@ -78,9 +78,9 @@ If you already use vscode, you can set it up as your default text editor to use 
 git config --global core.editor "code --wait"
 ```
 
-This command will set VSCODE to be your default text editor for all operations. 
+This command will set VSCODE to be your default text editor for all operations.
 
-### Setting Nano as a Default Text Editor For JupyterHub Environments 
+### Setting Nano as a Default Text Editor For JupyterHub Environments
 
 If you are using a linux based JupyterHub, we suggest setting the default text editor to **Nano**:
 
@@ -88,12 +88,12 @@ If you are using a linux based JupyterHub, we suggest setting the default text e
 git config --global core.editor nano
 ```
 
-This command will set **nano** to be your default text editor for all operations. 
+This command will set **nano** to be your default text editor for all operations.
 
 ## Setup Authentication For Git Through GitHub
 
-GitHub requires authentication to perform any changes to a repo. There are two ways to 
-set up authentication for GitHub: 
+GitHub requires authentication to perform any changes to a repo. There are two ways to
+set up authentication for GitHub:
 
 1. Using a personal access token which you can setup on GitHub.com and use locally to authenticate: This involves  creating a token on GitHub.com and then using it as a "password" locally in bash.
 2. Using SSH: This involves a bit more setup locally but once it is setup, you can skip the authentication steps for each change that you make to a repo.
@@ -105,40 +105,40 @@ In this lesson, you will learn about both options. If you are able to, we do  re
 Setting up a token is quicker in the short run as it requires fewer steps. However, in the long
 run, token-based authentication can be more difficult to manage given:
 
-1. You have to enter your token everytime you need to authenticate your GitHub account (unless you cache /store it)
-2. If you lose your token value you have to refresh / ceate a new token. 
+1. You have to enter your token every time you need to authenticate your GitHub account (unless you cache /store it)
+2. If you lose your token value you have to refresh / create a new token.
 
-<a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token" target="_blank">To setup a token to use for authentication, follow the GitHub guide.</a> 
+<a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token" target="_blank">To setup a token to use for authentication, follow the GitHub guide.</a>
 
 
 ```{=markdown}
 {{< noticeowl "tip" >}}
 
-If you chose to setup token based authentication, once you generate your token, be sure to copy it to a safe location before you close the GitHub page. If you lose the token, you will have to recreate it. 
+If you chose to setup token based authentication, once you generate your token, be sure to copy it to a safe location before you close the GitHub page. If you lose the token, you will have to recreate it.
 
 {{{< /noticeowl >}}}
 ```
 
 ### Set Up an SSH Connection to GitHub (recommended)
 
-SSH, which stands for **S**ecure **SH**ell, is an alternative way of authenticating with GitHub from your computer. While SSH setup involves more steps, once it is set up you never have to authenticate your connection to GitHub again. This is because you will have a Key stored locally on your computer that can be authenticated against a key stored on your GitHub account. 
+SSH, which stands for **S**ecure **SH**ell, is an alternative way of authenticating with GitHub from your computer. While SSH setup involves more steps, once it is set up you never have to authenticate your connection to GitHub again. This is because you will have a Key stored locally on your computer that can be authenticated against a key stored on your GitHub account.
 
 Setting up SSH involves two steps:
 
-1. creating the key itself locally on your computer, and 
-2. adding the key to your GitHub account. 
+1. creating the key itself locally on your computer, and
+2. adding the key to your GitHub account.
 
 Below you will find two GitHub tutorials that walk you through all of the steps needed to setup SSH on your computer.
 
-#### Step 1: Generate Your  SSH Key Locally 
+#### Step 1: Generate Your  SSH Key Locally
 
-<a href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">Use this link to find step by step instructions for generating your SSH key.</a> 
+<a href="https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">Use this link to find step by step instructions for generating your SSH key.</a>
 
-Make sure to follow the instructions all the way to the end of the page where you add your SSH key to your SSH agent. **NOTE:** Around step 4 the instructions tell you to set up a passphrase for your SSH connection. While you can do this if you like, it is an optional step. SSH is already very secure, so if you decide you don't want an SSH passphrase, you can just hit return on the empty passphrase line. 
+Make sure to follow the instructions all the way to the end of the page where you add your SSH key to your SSH agent. **NOTE:** Around step 4 the instructions tell you to set up a passphrase for your SSH connection. While you can do this if you like, it is an optional step. SSH is already very secure, so if you decide you don't want an SSH passphrase, you can just hit return on the empty passphrase line.
 
 #### Step 2:  Add Your SSH Key  To Your GitHub Account
 
-After you've generated your key and added it to your agent, you need to add the key to your GitHub account.<a href="https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account" target="_blank">This link provides step by step instructions on adding the SSH key to your account.</a> The instructions vary slightly from operating system to operating system, so be sure you are using the instructions for the operating system running on your computer (MAC, Windows or Linux). 
+After you've generated your key and added it to your agent, you need to add the key to your GitHub account.<a href="https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account" target="_blank">This link provides step by step instructions on adding the SSH key to your account.</a> The instructions vary slightly from operating system to operating system, so be sure you are using the instructions for the operating system running on your computer (MAC, Windows or Linux).
 
 <i class="fa fa-star"></i> **NOTE FOR LINUX USERS:** On the help page for adding your SSH key to your GitHub account, GitHub recommends that you install `xclip` and then use that to copy your SSH public key. While this works, it can cause problems on some computer. If you run into an issue on this step, you can always use `cat  path/to/file` and manually copy the output you get in the terminal. The `cat` command in BASH will copy the contents of a file to your clipboard. You can then paste that output (which is your secure key) into  GitHub to finalize connecting your computer to GitHub.
 {: .notice--success }
@@ -146,15 +146,15 @@ After you've generated your key and added it to your agent, you need to add the 
 
 ### Update Your Remotes To Support SSH
 
-If you have been using a username / password login to authenticate with GitHub, and you are  switching 
+If you have been using a username / password login to authenticate with GitHub, and you are  switching
 to SSH-based authentication, you will likely need to update the remotes attached to your GitHub repo(s).
-A quick way to see if this is the case, is 
+A quick way to see if this is the case, is
 
 1. at the command line, CD to the repo directory (cd path/to/practice-git)
-2. when in the directory of interest, run `git remote -v` 
+2. when in the directory of interest, run `git remote -v`
 
 If the URL returned looks like the one below, starting with **https://** then you are still authenticating
-using either a password or a token. If you setup token-based authentication, then you can use the https:// remote  setup. 
+using either a password or a token. If you setup token-based authentication, then you can use the https:// remote  setup.
 
 ```bash
 $ (base) practice-git $ git remote -v
@@ -162,7 +162,7 @@ origin	https://github.com/your-username/practice-git.git (fetch)
 origin	https://github.com/your-username/practice-git.git (push)
 ```
 
-However, if you wish to use SSH, then you will need to UPDATE the remote for your repo. 
+However, if you wish to use SSH, then you will need to UPDATE the remote for your repo.
 
 ```bash
 $ (base) practice-git $ git remote -v
@@ -189,5 +189,3 @@ $ git remote set-url origin git@github.com:your-username/practice-git.git
 ```
 
 Once you have updated your remotes, SSH authentication should work!
-
-

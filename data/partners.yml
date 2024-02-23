@@ -4,7 +4,7 @@
   avatar_alt: "Alt for image here"
   description: "This is a description."
   tagline: "We create high quality open lessons for open science."
-  linkedin: 
+  linkedin:
   color: "#ccc"
   fontColor: "#fff"
 - key: pyopensci
@@ -12,4 +12,4 @@
   avatar: "/images/authors/data-science-skills.png"
   tagline: "We build diverse community around the open source tools that drive open science"
   website: "https://www.pyopensci.org"
-  linkedin: 
+  linkedin:

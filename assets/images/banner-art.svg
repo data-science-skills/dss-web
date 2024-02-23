@@ -2,53 +2,53 @@
 	<title>banner-art-svg</title>
 	<style>
 		tspan { white-space:pre }
-		.shp0 { fill: #b6d5d0 } 
-		.shp1 { fill: #e9928b } 
-		.shp2 { fill: #de6667 } 
-		.shp3 { fill: #edf6f5 } 
-		.shp4 { fill: #dceceb } 
-		.shp5 { opacity: 0.58;fill: #376f92 } 
-		.shp6 { opacity: 0.671;fill: #ffffff } 
-		.shp7 { opacity: 0.278;fill: #ffffff } 
-		.shp8 { fill: #ffffff } 
-		.shp9 { fill: #ffab40 } 
-		.shp10 { fill: #0c1b3c } 
-		.shp11 { fill: #408c91 } 
-		.shp12 { fill: #376f92 } 
-		.shp13 { fill: #1b5175 } 
-		.shp14 { fill: #adccc7 } 
-		.shp15 { fill: #6eab9c } 
-		.shp16 { opacity: 0.4;fill: #f4d7c9 } 
-		.shp17 { opacity: 0.478;fill: #83a8bc } 
-		.shp18 { fill: #aecbc7 } 
-		.shp19 { fill: #b2e5e0 } 
-		.shp20 { fill: #93405e } 
-		.shp21 { fill: #67a4c3 } 
-		.shp22 { fill: #4f91b3 } 
-		.shp23 { fill: #f0d1aa } 
-		.shp24 { fill: #edbf84 } 
-		.shp25 { fill: #f4c8af } 
-		.shp26 { fill: #f7dfd3 } 
-		.shp27 { fill: #f2d6c8 } 
-		.shp28 { fill: #f5b89b } 
-		.shp29 { fill: #3fb8a9 } 
-		.shp30 { opacity: 0.522;fill: #1b5175 } 
-		.shp31 { fill: #ffac95 } 
-		.shp32 { fill: #f5911f } 
-		.shp33 { fill: #5f6386 } 
-		.shp34 { fill: #4a4e73 } 
-		.shp35 { opacity: 0.349;fill: #3fb8a9 } 
-		.shp36 { fill: #eb908b } 
-		.shp37 { fill: #ffaa3f } 
-		.shp38 { fill: #83a8bc } 
-		.shp39 { fill: #ffc945 } 
-		.shp40 { fill: #b2d3e4 } 
-		.shp41 { fill: #91415c } 
-		.shp42 { fill: #75354a } 
-		.shp43 { fill: #fdab3f } 
-		.shp44 { fill: #489da2 } 
-		.shp45 { fill: #040707 } 
-		.shp46 { fill: #8babc0 } 
+		.shp0 { fill: #b6d5d0 }
+		.shp1 { fill: #e9928b }
+		.shp2 { fill: #de6667 }
+		.shp3 { fill: #edf6f5 }
+		.shp4 { fill: #dceceb }
+		.shp5 { opacity: 0.58;fill: #376f92 }
+		.shp6 { opacity: 0.671;fill: #ffffff }
+		.shp7 { opacity: 0.278;fill: #ffffff }
+		.shp8 { fill: #ffffff }
+		.shp9 { fill: #ffab40 }
+		.shp10 { fill: #0c1b3c }
+		.shp11 { fill: #408c91 }
+		.shp12 { fill: #376f92 }
+		.shp13 { fill: #1b5175 }
+		.shp14 { fill: #adccc7 }
+		.shp15 { fill: #6eab9c }
+		.shp16 { opacity: 0.4;fill: #f4d7c9 }
+		.shp17 { opacity: 0.478;fill: #83a8bc }
+		.shp18 { fill: #aecbc7 }
+		.shp19 { fill: #b2e5e0 }
+		.shp20 { fill: #93405e }
+		.shp21 { fill: #67a4c3 }
+		.shp22 { fill: #4f91b3 }
+		.shp23 { fill: #f0d1aa }
+		.shp24 { fill: #edbf84 }
+		.shp25 { fill: #f4c8af }
+		.shp26 { fill: #f7dfd3 }
+		.shp27 { fill: #f2d6c8 }
+		.shp28 { fill: #f5b89b }
+		.shp29 { fill: #3fb8a9 }
+		.shp30 { opacity: 0.522;fill: #1b5175 }
+		.shp31 { fill: #ffac95 }
+		.shp32 { fill: #f5911f }
+		.shp33 { fill: #5f6386 }
+		.shp34 { fill: #4a4e73 }
+		.shp35 { opacity: 0.349;fill: #3fb8a9 }
+		.shp36 { fill: #eb908b }
+		.shp37 { fill: #ffaa3f }
+		.shp38 { fill: #83a8bc }
+		.shp39 { fill: #ffc945 }
+		.shp40 { fill: #b2d3e4 }
+		.shp41 { fill: #91415c }
+		.shp42 { fill: #75354a }
+		.shp43 { fill: #fdab3f }
+		.shp44 { fill: #489da2 }
+		.shp45 { fill: #040707 }
+		.shp46 { fill: #8babc0 }
 	</style>
 	<path id="Layer" class="shp0" d="M585.12 630.41L585.12 579.75C585.12 563.96 572.32 551.15 556.52 551.15L520.37 551.15L520.37 792.09L566.71 792.09L585.12 792.09L642.3 792.09L642.3 687.59C642.3 671.8 629.5 658.99 613.7 658.99C597.92 659 585.12 646.2 585.12 630.41Z" />
 	<path id="Layer" class="shp1" d="M895.84 731.84L872.77 754.37L865.01 742.83L852.63 724.41L882.29 710.63L890.39 723.31L895.84 731.84Z" />

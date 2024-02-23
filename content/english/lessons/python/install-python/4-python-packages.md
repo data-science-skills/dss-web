@@ -168,7 +168,7 @@ plt.xlabel("X-axis")
 plt.ylabel("Y-axis")
 plt.grid(True, linestyle="--", alpha=0.7)
 plt.legend(loc="upper right")
-plt.tight_layout()  
+plt.tight_layout()
 
 # Show the plot
 plt.show()

@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         {{ partial "image" (dict "Src" .Params.image "Alt" .Title "Class" "rounded-2 w-100 mb-5") }}
-        
+
         {{ with site.GetPage (string .Params.Author | urlize | lower) }}
         <div class="d-inline-flex align-items-center mb-3 me-3">
           <div class="user-image me-1">
@@ -26,13 +26,13 @@
           </div>
         </div>
         {{end}}
-        
+
         <span class="text-muted fw-500"><i class="far fa-calendar-alt text-dark me-1"></i> {{ time.Format ":date_long" .PublishDate }} <span class="mx-1 text-dark-50 fw-500">|</span> <i class="far fa-clock text-dark me-1"></i> {{.ReadingTime}} {{i18n `min_read`}}</span>
 
         <h2 class="h3 my-3">{{ .Title }}</h2>
 
         <div class="mt-5 content">{{.Content}}</div>
-        
+
         {{ with site.GetPage (string .Params.Author | urlize | lower) }}
         {{if .Title}}
         <div class="d-block d-sm-flex border p-5 pb-4 rounded-2 mt-5">
@@ -55,7 +55,7 @@
         </div>
         {{ end }}
         {{ end }}
-        
+
         <!-- comments -->
         {{ if site.DisqusShortname }}
         <div class="border p-5 rounded-2 mt-5">

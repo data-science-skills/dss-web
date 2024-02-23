@@ -78,7 +78,7 @@
       );
     };
 
-    // Funciton that will get fired uppon scrolling
+    // Function that will get fired upon scrolling
     var handleScroll = function handleScroll() {
       elements.forEach(function (item, id) {
         if (true === item.counterAlreadyFired) return;

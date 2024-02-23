@@ -45,9 +45,9 @@ clients_logo_slider:
   title: "Our partners"
   logos:
     - "images/partners/pyopensci.png"
-    - "images/dss-owl-logo-dark.png" 
+    - "images/dss-owl-logo-dark.png"
     - "images/partners/pyopensci.png"
-    - "images/dss-owl-logo-dark.png" 
+    - "images/dss-owl-logo-dark.png"
 
 
 ######################### Intro Video #####################

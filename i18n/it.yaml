@@ -1,9 +1,9 @@
 - id: read_more
   translation: Per saperne di più
-  
+
 - id: read_case_study
   translation: Leggi il case study completo
-  
+
 - id: view_product
   translation: Visualizza prodotto
 
@@ -51,42 +51,42 @@
 
 - id: all_jobs
   translation: Tutti i lavori
-  
+
 - id: fname
   translation: Nome di battesimo
-  
+
 - id: full_name
   translation: Nome e cognome
-  
+
 - id: lname
   translation: Cognome
-  
+
 - id: email
   translation: Indirizzo email
-  
+
 - id: website
   translation: Sito web
-  
+
 - id: organization_size
   translation: Dimensioni dell'organizzazione (dipendenti)*
-  
+
 - id: region
   translation: Regione*
-  
+
 - id: message
   translation: Messaggio
-  
+
 - id: submit_now
   translation: Invia ora
-  
+
 - id: get_demo
   translation: Ottieni demo
-  
+
 - id: cv_note
   translation: solo doc, file pdf consentito e la dimensione del file sarà inferiore a 2 MB
-  
+
 - id: upload_cv
   translation: Carica CV
-  
+
 - id: search_faq
   translation: Fare clic e cercare FAQ..

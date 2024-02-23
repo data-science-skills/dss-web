@@ -10,9 +10,9 @@
 				<i class="far fa-user-circle mb-3" style="font-size:82px"></i>
 				{{ end }}
 				<h1 class="h3 title mb-3">{{ .Title }}</h1>
-				
+
 				<div class="content">{{ .Content }}</div>
-				
+
 				<ul class="list-inline social-icons mt-4">
 					{{ range .Params.social }}
 					<li class="list-inline-item"><a class="d-inline-block" href="{{ .link | safeURL}}"><i class="{{ .icon }}"></i></a></li>

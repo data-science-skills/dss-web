@@ -7,25 +7,25 @@
 {{ $filteredPages := where .Site.Pages "Params.module" "eq" $currentModule }}
 
 <!--Page title banner -->
-_Default LESSONS LAYOUT 
+_Default LESSONS LAYOUT
 {{ $title := .Title }}
 {{ with .Params.banner }}
-  <div style="background-color: {{ .color }}; color: {{ .fontColor }};">    
-    <h1 class="h1 my-3">{{ $title }}</h1> 
+  <div style="background-color: {{ .color }}; color: {{ .fontColor }};">
+    <h1 class="h1 my-3">{{ $title }}</h1>
   </div>
 {{ else }}
-  <h1 class="h1 my-3">{{ .Title }}</h1> 
+  <h1 class="h1 my-3">{{ .Title }}</h1>
 {{ end }}
 <section class="section">
   <div class="container">
     <div class="row gx-6 justify-content-center">
-      <div class="col-lg-2 col-md-10 mt-5 mt-lg-0"> 
+      <div class="col-lg-2 col-md-10 mt-5 mt-lg-0">
         <ul class="lesson-navigation">
           {{ $currentURL := .Permalink }}
           {{ range ($filteredPages.ByParam "order") }}
           <li class="{{ if eq .Permalink $currentURL }}active{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
           {{ end }}
-        </ul> 
+        </ul>
 
       </div>
       <div class="col-lg-10 col-md-10">
@@ -49,13 +49,13 @@ _Default LESSONS LAYOUT
             </div>
           </div>
           {{end}}
-          
+
           <span class="text-muted fw-500"><i class="far fa-calendar-alt text-dark me-1"></i> {{ time.Format ":date_long" .PublishDate }} <span class="mx-1 text-dark-50 fw-500">|</span> <i class="far fa-clock text-dark me-1"></i> {{.ReadingTime}} {{i18n `min_read`}}</span>
-  
-          
-  
+
+
+
           <div class="mt-5 content">{{.Content}}</div>
-          
+
           {{ with site.GetPage (string .Params.Author | urlize | lower) }}
           {{if .Title}}
           <div class="d-block d-sm-flex border p-5 pb-4 rounded-2 mt-5">
@@ -78,7 +78,7 @@ _Default LESSONS LAYOUT
           </div>
           {{ end }}
           {{ end }}
-          
+
           <!-- comments -->
           {{ if site.DisqusShortname }}
           <div class="border p-5 rounded-2 mt-5">

@@ -47,10 +47,10 @@
 							<input class="text-dark my-1 w-100" type="file" name="cv" id="cv" required>
 							<small class="d-block">{{i18n `cv_note`}}</small>
 						</div>
-	
+
 						<button class="btn btn-sm btn-primary w-100" type="submit" aria-label="{{i18n `apply_now`}}">{{i18n `apply_now`}}</button>
 					</form>
-					
+
 					<div class="share-this-post d-flex flex-wrap align-items-center rounded-2 mt-4">
 						<span class="m-1 me-2 mt-0 text-dark fw-500">{{i18n `share_this_job`}}</span>
 						<ul class="m-1 mt-0 list-inline d-inline-block">
@@ -67,7 +67,7 @@
 						</ul>
 					</div>
 				</div>
-				
+
 				<div class="sidebar-widget bg-white rounded-2 shadow">
 					<h4 class="mb-3 h5">{{i18n `other_jobs`}}</h4>
 					{{ range first 4 (where site.RegularPages "Section" "career") }}

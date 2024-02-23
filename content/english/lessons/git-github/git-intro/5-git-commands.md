@@ -3,9 +3,9 @@ title: "Get Started with Git Commands for Version Control"
 subtitle: "Learn how to use basic git commands at the command line."
 date: 2023-09-04
 author: "Leah Wasser"
-authors: 
+authors:
    - "Jenny Palomino"
-   - "Max Joseph" 
+   - "Max Joseph"
    - "Leah Wasser"
 description: "A version control system allows you to track and manage changes to your files. Learn how to use some basic Git commands including add, commit and push."
 nav_title: "Git Commands"
@@ -20,7 +20,7 @@ order: 5
 
 After completing this page, you will be able to:
 
-* Use **git** to `add` and `commit` changed files to version control. 
+* Use **git** to `add` and `commit` changed files to version control.
 * Use **git** to `push` changed files from your local computer to the repository on **Github.com**.
 * Use **git** to `pull` changed file from your repo to your local computer.
 
@@ -45,7 +45,7 @@ Once you start working, you can use the `git status` command to check what chang
 Next, run `git status`.
 
 ``` bash
-$ git status 
+$ git status
 
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -68,7 +68,7 @@ Changes not staged for commit:
   (use "git checkout -- <file>..." to discard changes in working directory)
 
     modified:   README.md
-    
+
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
@@ -113,7 +113,7 @@ You can also add all of the files that you have edited at the same time using:
 
 {{< noticeowl "tip" >}}
 
-**Use `git add .` with caution**. Be sure to review the results from `git status` carefully before using `git add .`. You do not want to accidentally add files to version control that you do not want to change in your **GitHub** repository! 
+**Use `git add .` with caution**. Be sure to review the results from `git status` carefully before using `git add .`. You do not want to accidentally add files to version control that you do not want to change in your **GitHub** repository!
 {{< /noticeowl >}}
 
 ## Commit Changed Files Using git commit
@@ -160,7 +160,7 @@ on your local computer. Running `git clone` will make a full copy of the git rep
 from github.com to your
 local computer. It includes all of the .git history information that you will need
 to track changes in your repo. **You only need to run git clone once**. After you have
-run git clone, you can us `git pull` to upate your repo.
+run git clone, you can us `git pull` to update your repo.
 
 You also learned how to add and commit changes using `git add` and `git commit`.
 
@@ -178,12 +178,12 @@ To update your repo with changes that are on GitHub.com you can do the following
 1.  Open up bash and `cd` to the location of your git repo.
 2.  Once you are in the repo, run `git pull`.
 
-In the example below, there are no changes to any files. `git pull` returns `Already  up to date`.
+In the example below, there are no changes to any files. `git pull` returns `Already up to date`.
 
 ``` bash
 $ cd practice-git/
 $ git pull
-Already up to date. 
+Already up to date.
 ```
 
 Below is an example of using `git pull` when there are changes on github.com to pull
@@ -233,7 +233,7 @@ Notice that `git log` provides a lot of useful information about the commit, inc
 {{< noticeowl "tip" >}}
 
 `git log` by default returns a lot of information. You can view the log as single line entries with just the commit message using `git log --pretty=oneline`. `git log --
-pretty=oneline | head -n 10` will show you the most recent 10 entries. IMPORTANT: when the log results appear in bash, you can use the space bar to scroll through the results. If you want to return to the command prompt, hit the `q` key (q for quit). Try it out! 
+pretty=oneline | head -n 10` will show you the most recent 10 entries. IMPORTANT: when the log results appear in bash, you can use the space bar to scroll through the results. If you want to return to the command prompt, hit the `q` key (q for quit). Try it out!
 
 {{< /noticeowl >}}
 
@@ -255,7 +255,7 @@ using the following `bash` command:
 
 ``` bash
 # Comment in bash
-# Create a .gitignore file if one doesn't already exist 
+# Create a .gitignore file if one doesn't already exist
 touch .gitignore
 ```
 
@@ -282,7 +282,7 @@ Challenge - Create a New Text File In Your Repo
 
 It's time to practice your git skills! Do the following:
 
-1. If you haven't already, fork the `https://github.com/data-science-skills/practice-git` repo. 
+1. If you haven't already, fork the `https://github.com/data-science-skills/practice-git` repo.
 2. Next, clone your fork of that repo using `git clone`
 3. Open up the `README.md` file and make some changes to the text
 4. Use `git add` and `git commit` to add and commit those changes

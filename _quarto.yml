@@ -1,6 +1,6 @@
 project:
   type: hugo
-      
-format: 
+
+format:
   hugo-md:
     code-fold: false

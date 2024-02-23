@@ -6,7 +6,7 @@
 
 {{ if strings.HasPrefix .Destination "http" }}
  target="_blank"
-{{ end }} 
+{{ end }}
 
 {{ if in .Destination "?class=" }}
 {{ $getClass:= string (index (findRE "class=([^&#]*)" .Destination) 0) }}

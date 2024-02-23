@@ -3,7 +3,7 @@ title: "Fork and Clone GitHub Repos"
 subtitle: "Learn how to fork (or copy to your account) and clone (or download to your computer) github repos"
 date: 2023-09-04
 author: "Leah Wasser"
-authors: 
+authors:
     - "Jenny Palomino"
     - "Leah Wasser"
     - "Martha Morrissey"
@@ -32,7 +32,7 @@ Previously, you learned that **git** is tool that is used to track changes in fi
 You can use **git** and **GitHub** together in a workflow to make changes to files locally with **git** and to store and share your files on **GitHub.com**. To work together, **git** and **GitHub** use repositories (i.e. directories of files) to manage and store files.
 
 {{< noticeowl "tip" >}}
-A **GitHub** repository is a directory of files and folders that is hosted on **GitHub.com**.  
+A **GitHub** repository is a directory of files and folders that is hosted on **GitHub.com**.
 {{< /noticeowl >}}
 
 Having a copy of a set of files stored in **GitHub** repositories in the cloud is ideal because:

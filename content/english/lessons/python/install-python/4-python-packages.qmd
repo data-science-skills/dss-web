@@ -51,7 +51,7 @@ For example, the **matplotlib** package allows you to create plots of data. Sinc
 
 
 ## Open Source Python Packages for spatial and time series data
- 
+
 There are many different packages available for **Python**. Some of these are optimized for scientific tasks such as:
 
 * Statistics
@@ -110,7 +110,7 @@ import matplotlib
 ```
 
 
-Now you can create a plot but notice that you have to call 
+Now you can create a plot but notice that you have to call
 matplotlib as a full word each time you run a plot command below.
 
 ```{python}
@@ -148,14 +148,14 @@ import matplotlib.pyplot
 
 ```
 
-You can also import the module using an alias or short name, such as `plt` for `matplotlib.pyplot`. 
+You can also import the module using an alias or short name, such as `plt` for `matplotlib.pyplot`.
 
 ```{python}
 import matplotlib.pyplot as plt
 
 ```
 
-Below you import both matplotlib and numpy to create a plot. 
+Below you import both matplotlib and numpy to create a plot.
 
 
 ```{python}
@@ -187,7 +187,7 @@ plt.xlabel("X-axis")
 plt.ylabel("Y-axis")
 plt.grid(True, linestyle="--", alpha=0.7)
 plt.legend(loc="upper right")
-plt.tight_layout()  
+plt.tight_layout()
 
 # Show the plot
 plt.show()

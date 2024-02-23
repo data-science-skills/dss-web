@@ -1,9 +1,9 @@
 - id: read_more
   translation: 続きを読む
-  
+
 - id: read_case_study
   translation: ケーススタディ全体を読む
-  
+
 - id: view_product
   translation: 製品を見る
 
@@ -51,42 +51,42 @@
 
 - id: all_jobs
   translation: すべての仕事
-  
+
 - id: fname
   translation: ファーストネーム
-  
+
 - id: full_name
   translation: フルネーム
-  
+
 - id: lname
   translation: 苗字
-  
+
 - id: email
   translation: 電子メールアドレス
-  
+
 - id: website
   translation: Webサイト
-  
+
 - id: organization_size
   translation: 組織の規模*
-  
+
 - id: region
   translation: 領域*
-  
+
 - id: message
   translation: メッセージ
-  
+
 - id: submit_now
   translation: 今提出
-  
+
 - id: get_demo
   translation: デモを入手する
-  
+
 - id: cv_note
   translation: ドキュメント、PDFファイルのみが許可され、ファイルサイズは2MB未満になります
-  
+
 - id: upload_cv
   translation: 履歴書をアップロードする
-  
+
 - id: search_faq
   translation: よくある質問をクリックして検索してください..

@@ -3,7 +3,7 @@ title: "Install Python Using Conda & Conda-forge - Mambaforge"
 subtitle: "Learn how to install Python using conda and the conda-forge channel."
 description: |
   Learn how to install Python using conda and the conda-forge channel. Using conda is the best way to minimize issues when setting up Python for scientific use.
-authors: 
+authors:
   - "Leah Wasser"
   - "Jenny Palomino"
 date: 2023-02-13

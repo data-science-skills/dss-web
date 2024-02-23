@@ -1,0 +1,13 @@
+---
+title: "Install and Get Started Using Python"
+listing:
+  - id: get-started
+    contents: "*.qmd"
+    type: grid
+    sort: "date desc"
+
+page-layout: full
+toc: true
+module: "install-python"
+layout: "lessons"
+---

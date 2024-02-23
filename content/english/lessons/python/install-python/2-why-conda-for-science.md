@@ -3,7 +3,7 @@ title: "Why Conda is Better for Scientific Environments"
 subtitle: "Learn why conda can make installing creating environments easier for scientists."
 description: |
   A conda environment is a self contained Python environment that allows you to run different versions of Python (with different installed packages) on your computer. Learn how to conda environments can you help manage Python packages and dependencies.
-authors:  
+authors:
   - "Will Norris"
   - "Leah Wasser"
 date: 2023-02-12

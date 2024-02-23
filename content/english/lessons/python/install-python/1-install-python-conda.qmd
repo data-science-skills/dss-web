@@ -3,7 +3,7 @@ title: "Install Python Using Conda & Conda-forge - Mambaforge"
 subtitle: "Learn how to install Python using conda and the conda-forge channel."
 description: |
   Learn how to install Python using conda and the conda-forge channel. Using conda is the best way to minimize issues when setting up Python for scientific use.
-authors: 
+authors:
   - "Leah Wasser"
   - "Jenny Palomino"
 date: 2023-02-13
@@ -43,7 +43,7 @@ Before you start this lesson, be sure that you have a computer with internet acc
 There are numerous ways to install **Python** on your computer.
 Here, you will learn how to install **Python** using `conda` and the `conda-forge` channel.
 
-If you are a scientist, installing **Python** using conda is especially preferred as it can result in fewer environment conflicts. This is especially true if you are working with 
+If you are a scientist, installing **Python** using conda is especially preferred as it can result in fewer environment conflicts. This is especially true if you are working with
 spatial data.
 
 Installing conda also will allow you to [create unique, curated **Python** conda environments for your projects which is a recommended way of working in Python in general.](create-conda-environment.qmd)

@@ -1,9 +1,9 @@
 - id: read_more
   translation: अधिक पढ़ें
-  
+
 - id: read_case_study
   translation: पूरी केस स्टडी पढ़ें
-  
+
 - id: view_product
   translation: उत्पाद देखें
 
@@ -51,42 +51,42 @@
 
 - id: all_jobs
   translation: सारी नौकरियां
-  
+
 - id: fname
   translation: पहला नाम
-  
+
 - id: full_name
   translation: पूरा नाम
-  
+
 - id: lname
   translation: उपनाम
-  
+
 - id: email
   translation: ईमेल पता
-  
+
 - id: website
   translation: वेबसाइट
-  
+
 - id: organization_size
   translation: संगठन का आकार (कर्मचारी)*
-  
+
 - id: region
   translation: क्षेत्र*
-  
+
 - id: message
   translation: संदेश
-  
+
 - id: submit_now
   translation: अभी जमा करे
-  
+
 - id: get_demo
   translation: एक डेमो प्राप्त करें
-  
+
 - id: cv_note
   translation: केवल doc, pdf फ़ाइल की अनुमति है और फ़ाइल का आकार 2MB से कम होगा
-  
+
 - id: upload_cv
   translation: बायोडाटा अपलोड करो
-  
+
 - id: search_faq
   translation: क्लिक करें और खोजें अक्सर पूछे जाने वाले प्रश्न..

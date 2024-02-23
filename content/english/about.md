@@ -25,9 +25,9 @@ founders_quote:
 # who_we_are
 who_we_are:
   title: "Who we are?"
-  content: "We started in 2018 because we believe we can change the way organizations use data to make better decisions for their customers. We’ve been blown away by the impact BI has had on data quality and developer productivity for our customers. 
-  
-  
+  content: "We started in 2018 because we believe we can change the way organizations use data to make better decisions for their customers. We’ve been blown away by the impact BI has had on data quality and developer productivity for our customers.
+
+
   From startups to consumer it’s been incredible to see our product fundamentally change the way PMs, devs and data scientists collaborate to track and govern their analytics."
 
 
@@ -35,8 +35,8 @@ who_we_are:
 our_mission:
   title: "Our mission"
   content: "Companies have never had to understand their customers better or faster. Consumers choose the product with the best experience and companies can’t afford to stall product decisions while waiting days or weeks for answers from a centralized BI team.
-  
-  
+
+
   The industry gold standard has become to decentralize business intelligence, so that every team is autonomous in making data-driven decisions quickly."
 
 
@@ -77,7 +77,7 @@ features_box:
   - icon: "fas fa-hands-helping"
     title: "Your design partner now <br> and in the future"
     content: "Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada praesent."
-    
+
   - icon: "fas fa-headset"
     title: "Around the clock <br> support from day one"
     content: "Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada praesent."
@@ -102,7 +102,7 @@ office_culture:
   - image: "images/office-culture/05.jpg"
     column: "6" # column will be [ 6 or 3 ]
 
-  join_our_team: 
+  join_our_team:
     title : "Want to Join our Team?"
     content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat eget amtempus eu at consecttur."
     button:

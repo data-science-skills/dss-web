@@ -32,7 +32,7 @@ banner:
 
 
 #     Multiple channels, one platform for communication. Customers have more ways to interact with businesses than ever before.
-    
+
 #     * Reach customers across every channel: telephone, email, live chat, and social media
 
 #     * Get real-time notifications when customers interact with your business
@@ -46,7 +46,7 @@ banner:
 
 
 #     Create customized dashboards with analytical widgets for sales, such as charts, target meters, KPIs, and funnels.
-    
+
 #     * Make smarter business decisions with powerful, real-time analytics
 
 #     * Measure and manage your organization’s territory-wide sales performance
@@ -54,7 +54,7 @@ banner:
 #     * Track key performance indicators, including current trends and future predictions
 #     "
 
-      
+
 # ######################### product_info #####################
 # product_info:
 #   enable: false
@@ -98,7 +98,7 @@ banner:
 #   video_thumbnail: "images/products/02.jpg"
 #   background_class: ""
 
-      
+
 # ######################### content_and_image_ordered #####################
 # content_and_image_ordered:
 #   enable : true
@@ -110,26 +110,26 @@ banner:
 #     - "images/service-2.png"
 #     - "images/service-3.png"
 #     content : "Adipiscing elit Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
-      
+
 #   - title : "It is a privately owned Information and cyber security company"
 #     background_class : ""
 #     images:
 #     - "images/service-1.png"
 #     content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
-      
+
 #   - title : "It’s a team of experienced and skilled people with distributions"
 #     background_class : "bg-light"
 #     images:
 #     - "images/service-2.png"
 #     content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
-      
+
 #   - title : "A company standing different from others"
 #     background_class : ""
 #     images:
 #     - "images/service-3.png"
 #     content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat. consectetur adipiscing elit. Consequat tristique eget amet, tempus eu at consecttur. Leo facilisi nunc viverra tellus. Ac laoreet sit vel consquat."
 
-      
+
 # ######################### CTA #####################
 # cta:
 #   enable : true

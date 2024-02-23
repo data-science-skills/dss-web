@@ -1,0 +1,5 @@
+*.js
+*.js.map
+_vendor/*
+*.yaml
+package-lock.json

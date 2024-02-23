@@ -95,14 +95,14 @@ In this lesson, you will learn about both options. If you are able to, we do rec
 Setting up a token is quicker in the short run as it requires fewer steps. However, in the long
 run, token-based authentication can be more difficult to manage given:
 
-1.  You have to enter your token everytime you need to authenticate your GitHub account (unless you cache /store it)
-2.  If you lose your token value you have to refresh / ceate a new token.
+1.  You have to enter your token every time you need to authenticate your GitHub account (unless you cache /store it)
+2.  If you lose your token value you have to refresh / create a new token.
 
 <a href="https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token" target="_blank">To setup a token to use for authentication, follow the GitHub guide.</a>
 
 {{< noticeowl "tip" >}}
 
-If you chose to setup token based authentication, once you generate your token, be sure to copy it to a safe location before you close the GitHub page. If you lose the token, you will have to recreate it. 
+If you chose to setup token based authentication, once you generate your token, be sure to copy it to a safe location before you close the GitHub page. If you lose the token, you will have to recreate it.
 
 {{< /noticeowl >}}
 

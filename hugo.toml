@@ -1,5 +1,5 @@
 # DON'T REMOVE THIS FILE.
-# This file is for render site varibles and plugins
+# This file is for render site variables and plugins
 #
 # The actual configuration files are stored in the `config/_default/` folder.
 
@@ -29,7 +29,7 @@ light = "#EDF6F5"
 dark = "#1b2229"
 
 # font variables
-# base font size for full website, 
+# base font size for full website,
 font_size = "18px" # default is 16px
 
 # Font Scale Sizes
@@ -43,8 +43,8 @@ font_size = "18px" # default is 16px
 # "goldenRatio": 1.618
 font_scale = "1.25" # default is "majorThird": 1.25
 
-# go to https://fonts.google.com/ to find the font you want to use. 
-# Select your font and copy only the bold part from the URL. 
+# go to https://fonts.google.com/ to find the font you want to use.
+# Select your font and copy only the bold part from the URL.
 # Paste it here.
 # example: "Work+Sans:wght@400;500;600"
 # Headings
