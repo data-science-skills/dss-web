@@ -14,3 +14,7 @@ dependencies:
   # Jupyter
   - jupyterlab
   - notebook
+
+  # Infra
+  - watchdog
+  - nox
