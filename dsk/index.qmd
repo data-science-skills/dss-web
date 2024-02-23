@@ -3,16 +3,21 @@ pagetitle: "Data Science Skills for Science"
 page-layout: custom
 toc: false
 sidebar: false
-css: index.css
 description: |
   A website devoted to open data skill tutorials for scientists.
 ---
 
+Why is this adding a paragraph tag to the image??
+
+How do i create a custom template with a layout that i want vs the defaults?
+
+::: {.top-banner}
+![](images/top-bar.png){fig-alt="Faded image of desk with a person programming on a laptop."}
+:::
+
 ::: {.hero-banner}
 
-::: {.hero-image .hero-image-left}
-![](images/left-computer.png){fig-alt="Faded image of desk with a person programming on a laptop."}
-:::
+
 
 ::: {.content-block}
 

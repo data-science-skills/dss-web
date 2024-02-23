@@ -13,6 +13,8 @@ categories:
   - Get-started
 toc: true
 image: "/images/python/install-python-mambaforge.png"
+module: "install-python"
+layout: "lessons"
 ---
 
 ::: {.callout-important}

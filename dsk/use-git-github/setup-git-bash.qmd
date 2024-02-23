@@ -1,9 +1,7 @@
 ---
 title: "Setup Bash on Windows, Mac and Linuxs Operating Systems"
 subtitle: " Learn how to install bash on Windows, Mac and Linux operating systems. You will need the bash commandline to use Python and conda."
-author:
-  - "Leah Wasser"
-  - "Jenny Palomino"
+author: "leah wasser"
 date: 2023-02-12
 categories:
   - Python
@@ -12,6 +10,9 @@ categories:
 toc: true
 img: "featured-photo.jpeg"
 ---
+
+  - "Leah Wasser"
+  - "Jenny Palomino"
 
 # Setup Bash / Terminal
 
