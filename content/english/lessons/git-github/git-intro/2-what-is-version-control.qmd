@@ -18,9 +18,7 @@ url: /git-intro/about-version-control.html
 order: 2
 ---
 
-```{=markdown}
-{{< toc >}}
-```
+{{{< toc >}}}
 
 # Get Started With Git/GitHub.com
 
