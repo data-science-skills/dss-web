@@ -30,9 +30,9 @@ to your files. You will also learn how to implement version control using
 
 After completing this module, you will be able to:
 
-- Define **version control**.
-- Explain why **version control** is useful in a scientific workflow.
-- Implement version control using **git**.
+-   Define **version control**.
+-   Explain why **version control** is useful in a scientific workflow.
+-   Implement version control using **git**.
 
 ## <i class="fa-regular fa-square-check"></i> What You Need
 
