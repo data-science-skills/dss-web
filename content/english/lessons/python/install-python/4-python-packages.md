@@ -12,8 +12,8 @@ partner: "dss"
 image: "/images/python/import-python-packages.png"
 module: "install-python"
 url: "python/install/import-packages.html"
-format: hugo-md
 order: 4
+format: hugo-md
 ---
 
 {{< toc >}}
@@ -175,27 +175,3 @@ plt.show()
 ```
 
 <img src="4-python-packages_files/figure-markdown_strict/cell-5-output-1.png" data-fig-alt="And another Here is the alt tag" width="757" height="564" alt="Another line plot" />
-
-And an interactive plot...
-
-``` python
-print("bokeh would be here")
-# from bokeh.plotting import figure, show
-
-# # Sample data
-# x = [1, 2, 3, 4, 5]
-# y = [2, 4, 6, 8, 10]
-
-# # Create a Bokeh figure
-# p = figure(
-#     title="Simple Bokeh Plot", x_axis_label="X-axis", y_axis_label="Y-axis"
-# )
-
-# # Add a line plot
-# p.line(x, y, line_width=2, legend_label="Line")
-
-# # Display the plot
-# show(p)
-```
-
-    bokeh would be here

@@ -6,8 +6,8 @@ This is a hugo-driven website that power powered by Quarto to build lessons.
 
 <instructions - https://docs.gethugothemes.com/bigspring/installation/>
 
-1. install quarto and hugo and go
-2. run `npm install` to install all of the needed dependencies for the site.
+1. Install quarto and hugo and go
+2. Run `npm install` to install all of the needed dependencies for the site.
 
 ````
 added 84 packages, and audited 85 packages in 6s
@@ -24,11 +24,11 @@ found 0 vulnerabilities
 3. To build and preview
 
 ```bash
-$ cd dsk
+$ cd dss-lessons
 $ quarto preview
 ````
 
-3. update modules
+3. Update modules
 
 `hugo mod get -u`
 
@@ -45,7 +45,13 @@ To build a live preview of the site locally, run:
 
 `quarto preview`
 
-This will allow you to work on lessons and it will update the lessons
+This command will
+
+1. build the lessons running all of the code and returning outputs
+2. create a new md file that is what is used by Hugo to render the site.
+3. create a live dynamic local host that presents the webpage rendered.
+
+It also will update in real time allowing you to work on the content and update
 in realtime.
 
 `quarto render` will build a single static version of the site
@@ -218,3 +224,18 @@ Notes
 **Use `git add .` with caution**. Be sure to review the results from `git status` carefully before using `git add .`. You do not want to accidentally add files to version control that you do not want to change in your **GitHub** repository!
 {{< /noticeowl >}}
 ````
+
+# Markdown cleanup
+
+```
+>>> python -m scrip
+```
+
+this yaml is important for running code
+
+```toml
+format: hugo-md
+```
+
+Built in 477 ms
+Error: error building site: "/Users/leahawasser/Documents/GitHub/1-lessons/dss-web/content/english/lessons/python/python-functions/01-intro-functions.md:62:4": failed to parse Markdown attributes; you may need to quote the values
