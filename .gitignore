@@ -35,3 +35,10 @@ hugo_stats.json
 netlify.toml
 node_modules/*
 *.ipynb
+
+figs/**/*.js
+figs/**/*.css
+figs/**/*.woff
+content/english/**/libs/**
+hugo_stats.json
+assets/jsconfig.json

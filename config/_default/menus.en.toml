@@ -28,6 +28,12 @@ name = "Install Python"
 url = "/install-python-science-conda/"
 weight = 4
 
+[[main]]
+parent = "Lessons"
+name = "Functions in Python"
+url = "/write-functions/"
+weight = 4
+
 # [[main]]
 # parent = "Lessons"
 # name = "About"

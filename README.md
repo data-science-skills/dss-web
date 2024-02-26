@@ -6,8 +6,8 @@ This is a hugo-driven website that power powered by Quarto to build lessons.
 
 <instructions - https://docs.gethugothemes.com/bigspring/installation/>
 
-1. install quarto and hugo and go
-2. run `npm install` to install all of the needed dependencies for the site.
+1. Install quarto and hugo and go
+2. Run `npm install` to install all of the needed dependencies for the site.
 
 ````
 added 84 packages, and audited 85 packages in 6s
@@ -24,11 +24,11 @@ found 0 vulnerabilities
 3. To build and preview
 
 ```bash
-$ cd dsk
+$ cd dss-lessons
 $ quarto preview
 ````
 
-3. update modules
+3. Update modules
 
 `hugo mod get -u`
 
@@ -45,7 +45,13 @@ To build a live preview of the site locally, run:
 
 `quarto preview`
 
-This will allow you to work on lessons and it will update the lessons
+This command will
+
+1. build the lessons running all of the code and returning outputs
+2. create a new md file that is what is used by Hugo to render the site.
+3. create a live dynamic local host that presents the webpage rendered.
+
+It also will update in real time allowing you to work on the content and update
 in realtime.
 
 `quarto render` will build a single static version of the site
@@ -55,13 +61,35 @@ as is at the time you run it.
   https://quarto.org/docs/authoring/callouts.html
 - font awesome - `{{< fa graduation-cap >}}`
 
+Once the lessons are built, there is a clean step that moves images to the correct place so they are rendered by hugo. To run this use:
+
+`python3 scripts/clean-markdown.py`
+
+This will fix several issues including :
+
+- incorrect image links
+- problematic / quirks in the quarto build from qmd to hugo supported md.
+
+Once you have run these steps you can push your lessons to github!
+
+NOTE: To ensure code cells run be sure to use `{python} as triple braces with no `{python}` will not work:
+
+````
+```{python}
+```
+````
+
 ## Customization
 
-- environment - definted in \_environment.yml : `QUARTO_PYTHON=/Users/leahawasser/mambaforge/envs/dataskills/bin/python`
+We use a custom environment to build lessons that contains all of the Python packages needed. It is defined in `_environment.yml`:
+`QUARTO_PYTHON=/Users/leahawasser/mambaforge/envs/dataskills/bin/python`
+
+In our CI build, the entire things runs in a docker container to ensure it
+works as it should.
 
 ## theme and styles
 
-Right now we are overriding the default styles using a pyos.scss file.
+Right now we are overriding the default styles using a `pyos.scss` file.
 In the future it would be nice to be able build an entire sass
 suite of files with subfiles. but for now all modification can happen
 in that file. THe file is then declared as a part of the theme in `_quarto.yml`
@@ -70,10 +98,10 @@ template pages
 
 ## A few quirks working with hugo / quarto
 
-- quarto does NOT like a blank front-matter fields
-- it also doesn't like comments in the front-matter
+- Quarto does NOT like a blank front-matter fields. So if you don't have an image for a lesson yet, skip `image:` rather than leaving it empty.
+- It also doesn't like comments in the front-matter so you can't comment that line out.
 
-Both of the above will break a build.
+Both of the above will fully break a build.
 
 ## new lessons
 
@@ -144,7 +172,10 @@ module_description: "A version control system allows you to track and manage cha
 module: "intro-git"
 url: /install-python-science-conda/
 order: 1
+format: hugo-md
 ```
+
+You need to tell quarto that the format is `hugo-md`.
 
 ## Categories
 
@@ -218,3 +249,18 @@ Notes
 **Use `git add .` with caution**. Be sure to review the results from `git status` carefully before using `git add .`. You do not want to accidentally add files to version control that you do not want to change in your **GitHub** repository!
 {{< /noticeowl >}}
 ````
+
+# Markdown cleanup
+
+```
+>>> python3 scripts/clean-markdown.py
+```
+
+this yaml is important for running code
+
+```toml
+format: hugo-md
+```
+
+Built in 477 ms
+Error: error building site: "/Users/leahawasser/Documents/GitHub/1-lessons/dss-web/content/english/lessons/python/python-functions/01-intro-functions.md:62:4": failed to parse Markdown attributes; you may need to quote the values
