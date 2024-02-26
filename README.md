@@ -61,13 +61,35 @@ as is at the time you run it.
   https://quarto.org/docs/authoring/callouts.html
 - font awesome - `{{< fa graduation-cap >}}`
 
+Once the lessons are built, there is a clean step that moves images to the correct place so they are rendered by hugo. To run this use:
+
+`python3 scripts/clean-markdown.py`
+
+This will fix several issues including :
+
+- incorrect image links
+- problematic / quirks in the quarto build from qmd to hugo supported md.
+
+Once you have run these steps you can push your lessons to github!
+
+NOTE: To ensure code cells run be sure to use `{python} as triple braces with no `{python}` will not work:
+
+````
+```{python}
+```
+````
+
 ## Customization
 
-- environment - definted in \_environment.yml : `QUARTO_PYTHON=/Users/leahawasser/mambaforge/envs/dataskills/bin/python`
+We use a custom environment to build lessons that contains all of the Python packages needed. It is defined in `_environment.yml`:
+`QUARTO_PYTHON=/Users/leahawasser/mambaforge/envs/dataskills/bin/python`
+
+In our CI build, the entire things runs in a docker container to ensure it
+works as it should.
 
 ## theme and styles
 
-Right now we are overriding the default styles using a pyos.scss file.
+Right now we are overriding the default styles using a `pyos.scss` file.
 In the future it would be nice to be able build an entire sass
 suite of files with subfiles. but for now all modification can happen
 in that file. THe file is then declared as a part of the theme in `_quarto.yml`
@@ -76,10 +98,10 @@ template pages
 
 ## A few quirks working with hugo / quarto
 
-- quarto does NOT like a blank front-matter fields
-- it also doesn't like comments in the front-matter
+- Quarto does NOT like a blank front-matter fields. So if you don't have an image for a lesson yet, skip `image:` rather than leaving it empty.
+- It also doesn't like comments in the front-matter so you can't comment that line out.
 
-Both of the above will break a build.
+Both of the above will fully break a build.
 
 ## new lessons
 
@@ -150,7 +172,10 @@ module_description: "A version control system allows you to track and manage cha
 module: "intro-git"
 url: /install-python-science-conda/
 order: 1
+format: hugo-md
 ```
+
+You need to tell quarto that the format is `hugo-md`.
 
 ## Categories
 
@@ -228,7 +253,7 @@ Notes
 # Markdown cleanup
 
 ```
->>> python -m scrip
+>>> python3 scripts/clean-markdown.py
 ```
 
 this yaml is important for running code

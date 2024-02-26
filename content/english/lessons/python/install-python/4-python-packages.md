@@ -120,7 +120,7 @@ matplotlib.pyplot.title("Simple Matplotlib Plot")
 matplotlib.pyplot.show()
 ```
 
-<img src="4-python-packages_files/figure-markdown_strict/cell-3-output-1.png" data-fig-alt="Here is the alt tag" width="659" height="449" alt="A basic line plot" />
+{{< image src="/figs/python/install/4-python-packages/cell-3-output-1.png" alt="Here is the alt tag" width="659" height="449" caption="A basic line plot" >}}
 
 ### What is a Module in a Python Package?
 
@@ -174,4 +174,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-<img src="4-python-packages_files/figure-markdown_strict/cell-5-output-1.png" data-fig-alt="And another Here is the alt tag" width="757" height="564" alt="Another line plot" />
+{{< image src="/figs/python/install/4-python-packages/cell-5-output-1.png" alt="And another Here is the alt tag" width="757" height="564" caption="Another line plot" >}}
