@@ -57,14 +57,14 @@ as is at the time you run it.
 
 ## Customization
 
-- environment - definted in \_environment.yml : `QUARTO_PYTHON=/Users/leahawasser/mambaforge/envs/dataskills/bin/python`
+- environment - defined in \_environment.yml : `QUARTO_PYTHON=/Users/leahawasser/mambaforge/envs/dataskills/bin/python`
 
 ## theme and styles
 
 Right now we are overriding the default styles using a pyos.scss file.
 In the future it would be nice to be able build an entire sass
 suite of files with subfiles. but for now all modification can happen
-in that file. THe file is then declared as a part of the theme in `_quarto.yml`
+in that file. The file is then declared as a part of the theme in `_quarto.yml`
 
 template pages
 
@@ -79,7 +79,7 @@ Both of the above will break a build.
 
 All lessons are located in the `content/english/lessons` directory.
 
-- module : module name - will allow a set of lessons to be grouped
+- module: module name - will allow a set of lessons to be grouped
 - order: the order of the lesson in a series starting at 1
 
 ## Quarto quirks
@@ -163,7 +163,7 @@ avoid type= in the front matter ...
 
 ## Quarto issues to resolve
 
-THere are some quirks to deal with them using quarto and hugo together.
+There are some quirks to deal with them using quarto and hugo together.
 I think this is because quarto uses pandoc which causes some unique rendering
 outputs that quarto doesn't like.
 
